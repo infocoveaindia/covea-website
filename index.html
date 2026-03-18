@@ -26,12 +26,11 @@ white-space:nowrap;
 
 .topbar span{
 display:inline-block;
-padding-left:100%;
-animation:scroll 10s linear infinite;
+animation:scroll 12s linear infinite;
 }
 
 @keyframes scroll{
-0%{transform:translateX(0)}
+0%{transform:translateX(100%)}
 100%{transform:translateX(-100%)}
 }
 
@@ -56,23 +55,19 @@ text-decoration:none;
 margin:0 15px;
 text-decoration:none;
 color:#333;
-cursor:pointer;
 }
 
 .nav-buttons button{
-margin-left:10px;
 padding:8px 15px;
-border:none;
 background:#6b4a46;
 color:white;
-border-radius:5px;
+border:none;
 cursor:pointer;
 }
 
 /* SLIDER */
 
 .slider{
-width:100%;
 overflow:hidden;
 }
 
@@ -114,33 +109,7 @@ left:50%;
 transform:translate(-50%,-50%);
 }
 
-.hero-text h1{
-font-size:42px;
-margin:0;
-}
-
-.hero-text p{
-margin-top:10px;
-}
-
-.hero-text input{
-padding:10px;
-margin-top:10px;
-border:none;
-border-radius:4px;
-}
-
-.hero-text button{
-margin-top:10px;
-padding:10px 20px;
-background:#d4af37;
-border:none;
-color:black;
-border-radius:5px;
-cursor:pointer;
-}
-
-/* SERVICES */
+/* CATEGORY */
 
 .category{
 padding:50px;
@@ -154,24 +123,13 @@ gap:40px;
 flex-wrap:wrap;
 }
 
-.category-item{
-cursor:pointer;
-text-decoration:none;
-color:black;
-}
-
 .category-item img{
 width:90px;
 height:90px;
 border-radius:50%;
-object-fit:cover;
 }
 
-.category-item p{
-margin-top:8px;
-}
-
-/* SERVICE CARDS */
+/* PRODUCTS */
 
 .products{
 padding:40px;
@@ -197,7 +155,6 @@ box-shadow:0 4px 10px rgba(0,0,0,0.1);
 width:100%;
 height:220px;
 object-fit:cover;
-border-radius:6px;
 }
 
 .product button{
@@ -205,16 +162,15 @@ margin-top:10px;
 background:#6b4a46;
 color:white;
 border:none;
-padding:8px 15px;
-border-radius:4px;
+padding:8px;
 cursor:pointer;
 }
 
 /* TRUST */
 
 .crafting{
-text-align:center;
 padding:40px;
+text-align:center;
 }
 
 /* FOOTER */
@@ -223,9 +179,34 @@ padding:40px;
 background:#6b4a46;
 color:white;
 padding:40px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
+text-align:center;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-box{
+background:white;
+padding:20px;
+width:300px;
+border-radius:8px;
+}
+
+.modal-box input{
+width:100%;
+margin:8px 0;
+padding:8px;
 }
 
 /* WHATSAPP */
@@ -246,12 +227,10 @@ width:55px;
 
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
-<span>Innovation Solution for Tomorrow • Innovation Solution for Tomorrow •</span>
+<span>Innovation Solution for Tomorrow</span>
 </div>
 
-<!-- NAVBAR -->
 <div class="navbar">
 
 <a href="index.html" class="logo">COVEA</a>
@@ -264,12 +243,11 @@ width:55px;
 </div>
 
 <div class="nav-buttons">
-<button onclick="sendWhatsApp()">Sign In</button>
+<button onclick="openForm()">Sign In</button>
 </div>
 
 </div>
 
-<!-- SLIDER -->
 <div class="slider">
 <div class="slides">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
@@ -278,95 +256,109 @@ width:55px;
 </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-
 <div class="hero-text">
 <h1>COVEA PRIVATE LIMITED</h1>
 <p>Innovation Solution for Tomorrow</p>
-
-<input type="text" id="phone" placeholder="Enter Phone Number">
-<br>
-<button onclick="sendWhatsApp()">Get Started</button>
-
+<button onclick="openForm()">Get Started</button>
+</div>
 </div>
 
-</div>
-
-<!-- SERVICES -->
 <div class="category">
-
 <h2>Our Services</h2>
-
 <div class="category-list">
 
-<a href="life-insurance.html" class="category-item">
+<a href="life-insurance.html">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <p>Life Insurance</p>
 </a>
 
-<a href="health-insurance.html" class="category-item">
+<a href="health-insurance.html">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <p>Health Insurance</p>
 </a>
 
-<a href="mutual-funds.html" class="category-item">
+<a href="mutual-funds.html">
 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
 <p>Mutual Funds</p>
 </a>
 
-<a href="investment.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-<p>Investment Planning</p>
-</a>
-
-<a href="loans.html" class="category-item">
+<a href="loans.html">
 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
 <p>Loans</p>
 </a>
 
 </div>
-
 </div>
 
-<!-- TRUST -->
+<div class="products">
+<h2>Featured Services</h2>
+<div class="product-grid">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<h4>Wealth Management</h4>
+<button onclick="openForm()">Get Details</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<h4>Investment Planning</h4>
+<button onclick="openForm()">Get Details</button>
+</div>
+
+</div>
+</div>
+
 <div class="crafting">
-
 <h2>Why Choose COVEA</h2>
-
 <p>Trusted Experts • Secure Planning • Long-Term Growth</p>
 <p>500+ Clients | ₹10Cr+ Managed | 5+ Years Experience</p>
-
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-
-<div>
-<h3>COVEA</h3>
-<p>Private Limited Company</p>
+<p>COVEA Private Limited</p>
+<p>info.covea.india@gmail.com | 8800208059</p>
 </div>
 
-<div>
-<h3>Contact</h3>
-<p>Phone: 8800208059</p>
-<p>Email: info.covea.india@gmail.com</p>
-</div>
-
-</div>
-
-<!-- WHATSAPP -->
 <a href="https://wa.me/918800208059" class="whatsapp">
 <img src="https://img.icons8.com/color/96/whatsapp.png">
 </a>
 
+<!-- FORM -->
+<div class="modal" id="formModal">
+<div class="modal-box">
+<h3>Sign In</h3>
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<input id="email" placeholder="Email">
+<input id="age" placeholder="Age">
+<input id="income" placeholder="Annual Income">
+<button onclick="submitForm()">Submit</button>
+</div>
+</div>
+
 <script>
-function sendWhatsApp(){
-let phone = document.getElementById("phone").value;
-window.open(`https://wa.me/918800208059?text=Hello I am interested. My number is ${phone}`);
+
+function openForm(){
+document.getElementById("formModal").style.display="flex";
 }
+
+function submitForm(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let email=document.getElementById("email").value;
+let age=document.getElementById("age").value;
+let income=document.getElementById("income").value;
+
+let msg=`Name:${name}%0APhone:${phone}%0AEmail:${email}%0AAge:${age}%0AIncome:${income}`;
+
+window.open(`https://wa.me/918800208059?text=${msg}`);
+
+}
+
 </script>
 
 </body>
