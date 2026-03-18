@@ -3,118 +3,409 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>COVEA Private Limited</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6fb;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:#0b1c3d;
+color:white;
+padding:8px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.topbar span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 12s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#0b1c3d;
+text-decoration:none;
+}
+
+.nav-links a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+cursor:pointer;
+}
+
+.nav-buttons button{
+margin-left:10px;
+padding:8px 15px;
+border:none;
+background:#0b1c3d;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* SLIDER */
+
+.slider{
+width:100%;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+width:300%;
+animation:slide 12s linear infinite;
+}
+
+.slides img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+@keyframes slide{
+0%{transform:translateX(0)}
+100%{transform:translateX(-200%)}
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+text-align:center;
+color:white;
+}
+
+.hero img{
+width:100%;
+height:450px;
+object-fit:cover;
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.hero-text h1{
+font-size:42px;
+margin:0;
+}
+
+.hero-text p{
+margin-top:10px;
+}
+
+.hero-text input{
+padding:10px;
+margin-top:10px;
+}
+
+.hero-text button{
+margin-top:10px;
+padding:10px 20px;
+background:#d4af37;
+border:none;
+color:black;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* SERVICES */
+
+.category{
+padding:50px;
+text-align:center;
+}
+
+.category-list{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.category-item{
+cursor:pointer;
+text-decoration:none;
+color:black;
+}
+
+.category-item img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.category-item p{
+margin-top:8px;
+}
+
+/* PRODUCTS = SERVICES */
+
+.products{
+padding:40px;
+text-align:center;
+}
+
+.product-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.product{
+background:white;
+padding:20px;
+border-radius:10px;
+width:220px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:6px;
+}
+
+.product button{
+margin-top:10px;
+background:#0b1c3d;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:4px;
+cursor:pointer;
+}
+
+/* TRUST */
+
+.crafting{
+text-align:center;
+padding:40px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#0b1c3d;
+color:white;
+padding:40px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+.whatsapp img{
+width:55px;
+}
+
+</style>
 
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav">
-    <div class="logo">COVEA</div>
+<div class="topbar">
+<span>Trusted Financial Solutions | Insurance • Investments • Wealth Management</span>
+</div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div class="navbar">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
+<a href="index.html" class="logo">COVEA</a>
 
-  <div class="container hero-content">
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</div>
 
-    <div class="hero-left">
-      <h1>COVEA</h1>
-    </div>
+<div class="nav-buttons">
+<button onclick="sendWhatsApp()">Sign In</button>
+</div>
 
-    <div class="hero-center">
-      <div class="marquee">
-        <span>Innovative Solutions for Tomorrow • Innovative Solutions for Tomorrow •</span>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <input type="text" id="phone" placeholder="Enter Phone Number">
-      <button onclick="sendWhatsApp()">Sign In</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- IMAGE MARQUEE -->
-<section class="image-marquee">
-  <div class="track">
-    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
-
-    <!-- duplicate for smooth loop -->
-    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-  </div>
-</section>
+</div>
 
 <!-- SLIDER -->
-<section class="slider">
-  <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" class="slide active">
-  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="slide">
-  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="slide">
-</section>
+
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+</div>
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+
+<div class="hero-text">
+<h1>COVEA PRIVATE LIMITED</h1>
+<p>Innovative Solutions for Tomorrow</p>
+
+<input type="text" id="phone" placeholder="Enter Phone Number">
+<br>
+<button onclick="sendWhatsApp()">Get Started</button>
+
+</div>
+
+</div>
 
 <!-- SERVICES -->
-<section class="services container">
-  <h2>Our Services</h2>
 
-  <div class="grid">
-    <div class="card">Life Insurance</div>
-    <div class="card">Health Insurance</div>
-    <div class="card">Mutual Funds</div>
-    <div class="card">Investment Planning</div>
-    <div class="card">Loans</div>
-    <div class="card">Wealth Management</div>
-  </div>
-</section>
+<div class="category">
+
+<h2>Our Services</h2>
+
+<div class="category-list">
+
+<div class="category-item">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<p>Life Insurance</p>
+</div>
+
+<div class="category-item">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<p>Health Insurance</p>
+</div>
+
+<div class="category-item">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+<p>Mutual Funds</p>
+</div>
+
+<div class="category-item">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<p>Investment Planning</p>
+</div>
+
+<div class="category-item">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<p>Loans</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- SERVICES CARDS -->
+
+<div class="products">
+
+<h2>Featured Services</h2>
+
+<div class="product-grid">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<h4>Wealth Management</h4>
+<p>Grow your financial future</p>
+<button onclick="sendWhatsApp()">Get Details</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<h4>Investment Planning</h4>
+<p>Smart long-term strategies</p>
+<button onclick="sendWhatsApp()">Get Details</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+<h4>Insurance Solutions</h4>
+<p>Secure your life & health</p>
+<button onclick="sendWhatsApp()">Get Details</button>
+</div>
+
+</div>
+
+</div>
 
 <!-- TRUST -->
-<section class="trust">
-  <div class="container">
-    <h2>Why Choose Us</h2>
 
-    <div class="trust-grid">
-      <div>Trusted Experts</div>
-      <div>Secure Planning</div>
-      <div>Long-Term Growth</div>
-    </div>
+<div class="crafting">
 
-    <div class="stats">
-      <div><h3>500+</h3><p>Clients</p></div>
-      <div><h3>₹10Cr+</h3><p>Managed</p></div>
-      <div><h3>5+</h3><p>Experience</p></div>
-    </div>
-  </div>
-</section>
+<h2>Why Choose COVEA</h2>
+
+<p>Trusted Experts • Secure Planning • Long-Term Growth</p>
+<p>500+ Clients | ₹10Cr+ Managed | 5+ Years Experience</p>
+
+</div>
 
 <!-- FOOTER -->
-<footer>
-  <div class="container">
-    <h3>COVEA</h3>
-    <p>info.covea.india@gmail.com</p>
-    <p>8800208059</p>
-  </div>
-</footer>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/918800208059" class="whatsapp">💬</a>
+<div class="footer">
 
-<script src="script.js"></script>
+<div>
+<h3>COVEA</h3>
+<p>Private Limited Company</p>
+<p>India</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>Phone: 8800208059</p>
+<p>Email: info.covea.india@gmail.com</p>
+</div>
+
+</div>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/918800208059" class="whatsapp">
+<img src="https://img.icons8.com/color/96/whatsapp.png">
+</a>
+
+<script>
+
+function sendWhatsApp(){
+let phone = document.getElementById("phone").value;
+window.open(`https://wa.me/918800208059?text=Hello%20I%20am%20interested.%20My%20number%20is%20${phone}`);
+}
+
+</script>
 
 </body>
 </html>
