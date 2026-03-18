@@ -1,97 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>COVEA PRIVATE LIMITED</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COVEA Private Limited</title>
 <link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body><!-- NAVBAR --><header class="navbar">
+  <div class="logo">COVEA</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header><!-- HERO SECTION --><section class="hero">
+  <div class="overlay"></div>  <div class="hero-content">
+    <h1 class="brand">COVEA</h1><div class="tagline-wrapper">
+  <div class="tagline">Innovative Solutions for Tomorrow • Innovative Solutions for Tomorrow •</div>
+</div>
 
-<!-- TOP HEADER -->
-<header class="top-header">
-  <div class="header-left">COVEA</div>
-  <div class="header-center">
-    <marquee behavior="scroll" direction="left" scrollamount="5">Innovative Solutions for Tomorrow • Innovative Solutions for Tomorrow • Innovative Solutions for Tomorrow</marquee>
+<div class="signin-box">
+  <input type="text" id="phone" placeholder="Enter Phone Number">
+  <button onclick="sendWhatsApp()">Sign In</button>
+</div>
+
   </div>
-  <div class="header-right">
-    <input type="text" id="phone" placeholder="Enter Phone Number">
-    <button onclick="sendLead()">Sign In</button>
+</section><!-- IMAGE MARQUEE --><section class="image-marquee">
+  <div class="marquee-track">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
   </div>
-</header>
-
-<!-- IMAGE LINE BELOW TAGLINE -->
-<section class="image-line">
-  <div class="scroll-images">
-    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
-    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e">
-    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa">
-    <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642">
+</section><!-- MAIN SLIDER --><section class="slider">
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" class="slide active">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="slide">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="slide">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" class="slide">
   </div>
-</section>
-
-<!-- MAIN SLIDER -->
-<section class="main-slider">
-  <img id="mainSlider" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
-</section>
-
-<!-- SERVICES -->
-<section class="services">
+</section><!-- SERVICES --><section class="services">
   <h2>Our Services</h2>
   <div class="grid">
     <div class="card">Life Insurance</div>
     <div class="card">Health Insurance</div>
     <div class="card">Mutual Funds</div>
-    <div class="card">Investment</div>
+    <div class="card">Investment Planning</div>
     <div class="card">Loans</div>
     <div class="card">Wealth Management</div>
   </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="why">
-  <h2>Why Choose COVEA</h2>
-  <div class="grid">
-    <div class="card">Trusted Experts</div>
-    <div class="card">Secure Planning</div>
-    <div class="card">Long-Term Growth</div>
+</section><!-- TRUST SECTION --><section class="trust">
+  <h2>Why Choose Us</h2>
+  <div class="trust-grid">
+    <div>Trusted Experts</div>
+    <div>Secure Planning</div>
+    <div>Long-Term Growth</div>
+  </div>  <div class="stats">
+    <div><h3>500+</h3><p>Clients</p></div>
+    <div><h3>₹10Cr+</h3><p>Managed</p></div>
+    <div><h3>5+</h3><p>Years Experience</p></div>
   </div>
-</section>
+</section><!-- REVIEWS --><section class="reviews">
+  <h2>Client Reviews</h2>  <textarea placeholder="Write your review..."></textarea><button>Submit</button>
 
-<!-- STATS -->
-<section class="stats">
-  <div>
-    <h3>500+</h3>
-    <p>Clients</p>
+  <div class="review-box">
+    <p>"Excellent service and support!"</p>
   </div>
-  <div>
-    <h3>₹10Cr+</h3>
-    <p>Managed</p>
-  </div>
-  <div>
-    <h3>5+</h3>
-    <p>Years Experience</p>
-  </div>
-</section>
+</section><!-- FOOTER --><footer>
+  <div class="footer-content">
+    <div>
+      <h3>COVEA</h3>
+      <p>info.covea.india@gmail.com</p>
+      <p>8800208059</p>
+    </div><div>
+  <h4>Quick Links</h4>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
 
-<!-- REVIEWS -->
-<section class="reviews">
-  <h2>Client Reviews</h2>
-  <textarea placeholder="Write your review"></textarea>
-  <button>Submit</button>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>COVEA PRIVATE LIMITED</p>
-  <p>Email: info.covea.india@gmail.com | Phone: 8800208059</p>
-  <div class="footer-links">
-    <a href="index.html">Home</a> | 
-    <a href="services.html">Services</a> | 
-    <a href="about.html">About</a> | 
-    <a href="contact.html">Contact</a>
   </div>
-</footer>
+</footer><!-- FLOATING WHATSAPP --><a href="https://wa.me/918800208059" class="whatsapp">💬</a>
 
-</body>
+<script src="script.js"></script></body>
 </html>
