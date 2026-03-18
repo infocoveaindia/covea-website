@@ -11,13 +11,13 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#f4f6fb;
+background:#f4efec;
 }
 
 /* TOP BAR */
 
 .topbar{
-background:#0b1c3d;
+background:#3b2624;
 color:white;
 padding:8px;
 overflow:hidden;
@@ -27,7 +27,7 @@ white-space:nowrap;
 .topbar span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 12s linear infinite;
+animation:scroll 10s linear infinite;
 }
 
 @keyframes scroll{
@@ -48,7 +48,7 @@ background:white;
 .logo{
 font-size:22px;
 font-weight:bold;
-color:#0b1c3d;
+color:#5b3a36;
 text-decoration:none;
 }
 
@@ -63,7 +63,7 @@ cursor:pointer;
 margin-left:10px;
 padding:8px 15px;
 border:none;
-background:#0b1c3d;
+background:#6b4a46;
 color:white;
 border-radius:5px;
 cursor:pointer;
@@ -126,6 +126,8 @@ margin-top:10px;
 .hero-text input{
 padding:10px;
 margin-top:10px;
+border:none;
+border-radius:4px;
 }
 
 .hero-text button{
@@ -169,7 +171,7 @@ object-fit:cover;
 margin-top:8px;
 }
 
-/* PRODUCTS = SERVICES */
+/* SERVICE CARDS */
 
 .products{
 padding:40px;
@@ -200,7 +202,7 @@ border-radius:6px;
 
 .product button{
 margin-top:10px;
-background:#0b1c3d;
+background:#6b4a46;
 color:white;
 border:none;
 padding:8px 15px;
@@ -218,7 +220,7 @@ padding:40px;
 /* FOOTER */
 
 .footer{
-background:#0b1c3d;
+background:#6b4a46;
 color:white;
 padding:40px;
 display:flex;
@@ -244,10 +246,12 @@ width:55px;
 
 <body>
 
+<!-- TOP BAR -->
 <div class="topbar">
-<span>Trusted Financial Solutions | Insurance • Investments • Wealth Management</span>
+<span>Innovation Solution for Tomorrow • Innovation Solution for Tomorrow •</span>
 </div>
 
+<!-- NAVBAR -->
 <div class="navbar">
 
 <a href="index.html" class="logo">COVEA</a>
@@ -266,7 +270,6 @@ width:55px;
 </div>
 
 <!-- SLIDER -->
-
 <div class="slider">
 <div class="slides">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
@@ -276,14 +279,13 @@ width:55px;
 </div>
 
 <!-- HERO -->
-
 <div class="hero">
 
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 
 <div class="hero-text">
 <h1>COVEA PRIVATE LIMITED</h1>
-<p>Innovative Solutions for Tomorrow</p>
+<p>Innovation Solution for Tomorrow</p>
 
 <input type="text" id="phone" placeholder="Enter Phone Number">
 <br>
@@ -294,77 +296,42 @@ width:55px;
 </div>
 
 <!-- SERVICES -->
-
 <div class="category">
 
 <h2>Our Services</h2>
 
 <div class="category-list">
 
-<div class="category-item">
+<a href="life-insurance.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <p>Life Insurance</p>
-</div>
+</a>
 
-<div class="category-item">
+<a href="health-insurance.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <p>Health Insurance</p>
-</div>
+</a>
 
-<div class="category-item">
+<a href="mutual-funds.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
 <p>Mutual Funds</p>
-</div>
+</a>
 
-<div class="category-item">
+<a href="investment.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
 <p>Investment Planning</p>
-</div>
+</a>
 
-<div class="category-item">
+<a href="loans.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
 <p>Loans</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- SERVICES CARDS -->
-
-<div class="products">
-
-<h2>Featured Services</h2>
-
-<div class="product-grid">
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<h4>Wealth Management</h4>
-<p>Grow your financial future</p>
-<button onclick="sendWhatsApp()">Get Details</button>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<h4>Investment Planning</h4>
-<p>Smart long-term strategies</p>
-<button onclick="sendWhatsApp()">Get Details</button>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<h4>Insurance Solutions</h4>
-<p>Secure your life & health</p>
-<button onclick="sendWhatsApp()">Get Details</button>
-</div>
+</a>
 
 </div>
 
 </div>
 
 <!-- TRUST -->
-
 <div class="crafting">
 
 <h2>Why Choose COVEA</h2>
@@ -375,13 +342,11 @@ width:55px;
 </div>
 
 <!-- FOOTER -->
-
 <div class="footer">
 
 <div>
 <h3>COVEA</h3>
 <p>Private Limited Company</p>
-<p>India</p>
 </div>
 
 <div>
@@ -393,18 +358,15 @@ width:55px;
 </div>
 
 <!-- WHATSAPP -->
-
 <a href="https://wa.me/918800208059" class="whatsapp">
 <img src="https://img.icons8.com/color/96/whatsapp.png">
 </a>
 
 <script>
-
 function sendWhatsApp(){
 let phone = document.getElementById("phone").value;
-window.open(`https://wa.me/918800208059?text=Hello%20I%20am%20interested.%20My%20number%20is%20${phone}`);
+window.open(`https://wa.me/918800208059?text=Hello I am interested. My number is ${phone}`);
 }
-
 </script>
 
 </body>
