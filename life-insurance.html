@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tata AIA Life Insurance - COVEA</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4efec;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+background:white;
+}
+
+.logo{
+font-weight:bold;
+color:#5b3a36;
+text-decoration:none;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:40px;
+background:#3b2624;
+color:white;
+}
+
+/* CATEGORY */
+
+.categories{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+padding:30px;
+}
+
+.cat{
+padding:10px 18px;
+background:#6b4a46;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* PLAN SECTION */
+
+.plans{
+display:none;
+padding:30px;
+}
+
+.plan-grid{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.plan{
+background:white;
+padding:20px;
+width:260px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+/* MODAL FORM */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-box{
+background:white;
+padding:20px;
+width:320px;
+border-radius:8px;
+}
+
+.modal-box input, select{
+width:100%;
+margin:8px 0;
+padding:8px;
+}
+
+button{
+background:#6b4a46;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+width:100%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="index.html" class="logo">COVEA</a>
+</div>
+
+<div class="header">
+<h1>Tata AIA Life Insurance</h1>
+<p>Select Category → Choose Plan → Get Instant Quote</p>
+</div>
+
+<!-- CATEGORIES -->
+
+<div class="categories">
+
+<div class="cat" onclick="showPlans('protection')">Protection Plan</div>
+<div class="cat" onclick="showPlans('wealth')">Wealth Plan</div>
+<div class="cat" onclick="showPlans('retirement')">Retirement Plan</div>
+<div class="cat" onclick="showPlans('saving')">Saving Plan</div>
+<div class="cat" onclick="showPlans('shubhlabh')">Shubh Labh Plan</div>
+
+</div>
+
+<!-- PLANS -->
+
+<div id="plans" class="plans">
+<div class="plan-grid" id="planList"></div>
+</div>
+
+<!-- FORM -->
+
+<div class="modal" id="formModal">
+<div class="modal-box">
+
+<h3>Get Quote</h3>
+
+<input id="dob" type="date">
+<input id="income" placeholder="Annual Income">
+
+<select id="type">
+<option>Salaried</option>
+<option>Business</option>
+</select>
+
+<input id="phone" placeholder="Phone Number">
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+</div>
+
+<script>
+
+const data={
+protection:[
+"Sampoorna Raksha Supreme",
+"Saral Jeevan Bima",
+"Raksha TPA Plan",
+"Term Secure Plus",
+"Life Guard Plan",
+"Family Protection Plan"
+],
+wealth:[
+"Fortune Pro",
+"Wealth Pro Plan",
+"Smart Wealth Builder"
+],
+retirement:[
+"Retire Smart Plan",
+"Pension Builder Plan"
+],
+saving:[
+"Smart Saving Plan",
+"Guaranteed Return Plan"
+],
+shubhlabh:[
+"Shubh Labh Plan",
+"Shubh Return Plan"
+]
+};
+
+function showPlans(type){
+let list=data[type];
+let html="";
+
+list.forEach(plan=>{
+html+=`<div class="plan" onclick="openForm('${plan}')">${plan}</div>`;
+});
+
+document.getElementById("planList").innerHTML=html;
+document.getElementById("plans").style.display="block";
+}
+
+let selectedPlan="";
+
+function openForm(plan){
+selectedPlan=plan;
+document.getElementById("formModal").style.display="flex";
+}
+
+function submitForm(){
+
+let dob=document.getElementById("dob").value;
+let income=document.getElementById("income").
