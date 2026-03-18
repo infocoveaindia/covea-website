@@ -12,45 +12,61 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="container nav-flex">
-    <h2 class="logo">COVEA</h2>
+  <div class="container nav">
+    <div class="logo">COVEA</div>
+
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-overlay"></div>
+  <div class="overlay"></div>
 
-  <div class="container hero-flex">
-    <div class="left">
+  <div class="container hero-content">
+
+    <div class="hero-left">
       <h1>COVEA</h1>
     </div>
 
-    <div class="center">
-      <p class="moving-text">Innovative Solutions for Tomorrow</p>
+    <div class="hero-center">
+      <div class="marquee">
+        <span>Innovative Solutions for Tomorrow • Innovative Solutions for Tomorrow •</span>
+      </div>
     </div>
 
-    <div class="right">
-      <input type="text" placeholder="Enter Phone">
-      <button>Sign In</button>
+    <div class="hero-right">
+      <input type="text" id="phone" placeholder="Enter Phone Number">
+      <button onclick="sendWhatsApp()">Sign In</button>
     </div>
+
   </div>
 </section>
 
-<!-- IMAGE STRIP -->
-<section class="image-strip">
-  <div class="strip-track">
+<!-- IMAGE MARQUEE -->
+<section class="image-marquee">
+  <div class="track">
     <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
     <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+
+    <!-- duplicate for smooth loop -->
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
   </div>
+</section>
+
+<!-- SLIDER -->
+<section class="slider">
+  <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" class="slide active">
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="slide">
+  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="slide">
 </section>
 
 <!-- SERVICES -->
@@ -67,14 +83,38 @@
   </div>
 </section>
 
+<!-- TRUST -->
+<section class="trust">
+  <div class="container">
+    <h2>Why Choose Us</h2>
+
+    <div class="trust-grid">
+      <div>Trusted Experts</div>
+      <div>Secure Planning</div>
+      <div>Long-Term Growth</div>
+    </div>
+
+    <div class="stats">
+      <div><h3>500+</h3><p>Clients</p></div>
+      <div><h3>₹10Cr+</h3><p>Managed</p></div>
+      <div><h3>5+</h3><p>Experience</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <p>COVEA Private Limited</p>
+    <h3>COVEA</h3>
     <p>info.covea.india@gmail.com</p>
     <p>8800208059</p>
   </div>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918800208059" class="whatsapp">💬</a>
+
+<script src="script.js"></script>
 
 </body>
 </html>
