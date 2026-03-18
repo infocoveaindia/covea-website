@@ -69,7 +69,7 @@ border-radius:5px;
 cursor:pointer;
 }
 
-/* IMAGE SLIDER */
+/* SLIDER FIXED */
 
 .slider{
 width:100%;
@@ -78,8 +78,8 @@ overflow:hidden;
 
 .slides{
 display:flex;
-width:300%;
-animation:slide 12s linear infinite;
+width:700%;
+animation:slide 20s linear infinite;
 }
 
 .slides img{
@@ -90,7 +90,7 @@ object-fit:cover;
 
 @keyframes slide{
 0%{transform:translateX(0)}
-100%{transform:translateX(-200%)}
+100%{transform:translateX(-600%)}
 }
 
 /* HERO */
@@ -287,16 +287,20 @@ width:55px;
 
 </div>
 
-<div class="slider">
+<!-- SLIDER UPDATED -->
 
+<div class="slider">
 <div class="slides">
 
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 
 </div>
-
 </div>
 
 <div class="hero">
@@ -317,22 +321,22 @@ width:55px;
 
 <div class="category-list">
 
-<a href="#" class="category-item">
+<a href="life-insurance.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <p>Life Insurance</p>
 </a>
 
-<a href="#" class="category-item">
+<a href="health-insurance.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <p>Health Insurance</p>
 </a>
 
-<a href="#" class="category-item">
+<a href="mutual-funds.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
 <p>Mutual Funds</p>
 </a>
 
-<a href="#" class="category-item">
+<a href="loans.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
 <p>Loans</p>
 </a>
@@ -420,7 +424,6 @@ document.getElementById("formModal").style.display="flex";
 }
 
 function submitForm(){
-
 let name=document.getElementById("name").value;
 let phone=document.getElementById("phone").value;
 let email=document.getElementById("email").value;
@@ -430,7 +433,6 @@ let income=document.getElementById("income").value;
 let msg=`Name:${name}%0APhone:${phone}%0AEmail:${email}%0AAge:${age}%0AIncome:${income}`;
 
 window.open(`https://wa.me/918800208059?text=${msg}`);
-
 }
 
 </script>
