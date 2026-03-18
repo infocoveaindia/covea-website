@@ -69,7 +69,7 @@ border-radius:5px;
 cursor:pointer;
 }
 
-/* SLIDER FIXED */
+/* SLIDER FIXED SPEED */
 
 .slider{
 width:100%;
@@ -79,7 +79,7 @@ overflow:hidden;
 .slides{
 display:flex;
 width:700%;
-animation:slide 20s linear infinite;
+animation:slide 40s linear infinite; /* SPEED MATCHED WITH TOPBAR */
 }
 
 .slides img{
@@ -287,8 +287,6 @@ width:55px;
 
 </div>
 
-<!-- SLIDER UPDATED -->
-
 <div class="slider">
 <div class="slides">
 
@@ -302,140 +300,3 @@ width:55px;
 
 </div>
 </div>
-
-<div class="hero">
-
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-
-<div class="hero-text">
-<h1>COVEA PRIVATE LIMITED</h1>
-<p>Innovation Solution for Tomorrow</p>
-<button onclick="openForm()">Get Started</button>
-</div>
-
-</div>
-
-<div class="category">
-
-<h2>Our Services</h2>
-
-<div class="category-list">
-
-<a href="life-insurance.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<p>Life Insurance</p>
-</a>
-
-<a href="health-insurance.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<p>Health Insurance</p>
-</a>
-
-<a href="mutual-funds.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<p>Mutual Funds</p>
-</a>
-
-<a href="loans.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
-<p>Loans</p>
-</a>
-
-</div>
-
-</div>
-
-<div class="products">
-
-<h2>Featured Services</h2>
-
-<div class="product-grid">
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<h4>Wealth Management</h4>
-<button onclick="openForm()">Get Details</button>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<h4>Investment Planning</h4>
-<button onclick="openForm()">Get Details</button>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<h4>Insurance Solutions</h4>
-<button onclick="openForm()">Get Details</button>
-</div>
-
-</div>
-
-</div>
-
-<div class="crafting">
-
-<h2>Why Choose COVEA</h2>
-
-<p>Trusted Experts • Secure Planning • Long-Term Growth</p>
-<p>500+ Clients | ₹10Cr+ Managed | 5+ Years Experience</p>
-
-</div>
-
-<div class="footer">
-
-<div>
-<h3>COVEA</h3>
-<p>Private Limited Company</p>
-<p>India</p>
-</div>
-
-<div>
-<h3>Contact</h3>
-<p>Phone: 8800208059</p>
-<p>Email: info.covea.india@gmail.com</p>
-</div>
-
-</div>
-
-<a href="https://wa.me/918800208059" class="whatsapp">
-<img src="https://img.icons8.com/color/96/whatsapp.png">
-</a>
-
-<!-- FORM -->
-<div class="modal" id="formModal">
-<div class="modal-box">
-<h3>Sign In</h3>
-
-<input id="name" placeholder="Name">
-<input id="phone" placeholder="Phone">
-<input id="email" placeholder="Email">
-<input id="age" placeholder="Age">
-<input id="income" placeholder="Annual Income">
-
-<button onclick="submitForm()">Submit</button>
-</div>
-</div>
-
-<script>
-
-function openForm(){
-document.getElementById("formModal").style.display="flex";
-}
-
-function submitForm(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let email=document.getElementById("email").value;
-let age=document.getElementById("age").value;
-let income=document.getElementById("income").value;
-
-let msg=`Name:${name}%0APhone:${phone}%0AEmail:${email}%0AAge:${age}%0AIncome:${income}`;
-
-window.open(`https://wa.me/918800208059?text=${msg}`);
-}
-
-</script>
-
-</body>
-</html>
