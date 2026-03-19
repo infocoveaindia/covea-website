@@ -6,14 +6,12 @@
 <title>COVEA Private Limited</title>
 
 <style>
-/* ==================== GENERAL ==================== */
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
     background:#f4efec;
 }
 
-/* ==================== TOP BAR ==================== */
 .topbar{
     background:#3b2624;
     color:white;
@@ -31,7 +29,6 @@ body{
     100%{transform:translateX(-100%)}
 }
 
-/* ==================== NAVBAR ==================== */
 .navbar{
     display:flex;
     justify-content:space-between;
@@ -61,7 +58,6 @@ body{
     cursor:pointer;
 }
 
-/* ==================== SLIDER ==================== */
 .slider{
     width:100%;
     overflow:hidden;
@@ -81,7 +77,6 @@ body{
     100%{transform:translateX(-50%)}
 }
 
-/* ==================== HERO ==================== */
 .hero{
     position:relative;
     text-align:center;
@@ -115,7 +110,6 @@ body{
     cursor:pointer;
 }
 
-/* ==================== CATEGORY ==================== */
 .category{
     padding:50px;
     text-align:center;
@@ -141,7 +135,6 @@ body{
     margin-top:8px;
 }
 
-/* ==================== PRODUCTS ==================== */
 .products{
     padding:40px;
     text-align:center;
@@ -175,13 +168,11 @@ body{
     cursor:pointer;
 }
 
-/* ==================== CRAFTING / TRUST ==================== */
 .crafting{
     text-align:center;
     padding:40px;
 }
 
-/* ==================== FOOTER ==================== */
 .footer{
     background:#6b4a46;
     color:white;
@@ -193,7 +184,6 @@ body{
     bottom:0;
 }
 
-/* ==================== MODAL ==================== */
 .modal{
     display:none;
     position:fixed;
@@ -217,7 +207,6 @@ body{
     padding:8px;
 }
 
-/* ==================== WHATSAPP ==================== */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -231,19 +220,17 @@ body{
 
 <body>
 
-<!-- ==================== TOP BAR ==================== -->
 <div class="topbar">
 <span>Innovation Solution for Tomorrow</span>
 </div>
 
-<!-- ==================== NAVBAR ==================== -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
 
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="categories.html">Categories</a>
-<a href="products.html">Products</a>
+<a href="about.html">About</a> <!-- CHANGED -->
 <a href="contact.html">Contact</a>
 </div>
 
@@ -252,7 +239,6 @@ body{
 </div>
 </div>
 
-<!-- ==================== SLIDER ==================== -->
 <div class="slider">
 <div class="slides">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
@@ -262,7 +248,7 @@ body{
 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<!-- duplicate for loop -->
+
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
@@ -273,7 +259,6 @@ body{
 </div>
 </div>
 
-<!-- ==================== HERO ==================== -->
 <div class="hero">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <div class="hero-text">
@@ -283,30 +268,33 @@ body{
 </div>
 </div>
 
-<!-- ==================== CATEGORY ==================== -->
 <div class="category">
 <h2>Our Services</h2>
 <div class="category-list">
+
 <a href="life-insurance.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <p>Life Insurance</p>
 </a>
-<a href="health-insurance.html" class="category-item">
+
+<a href="healthinsurance.html" class="category-item"> <!-- CHANGED -->
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <p>Health Insurance</p>
 </a>
+
 <a href="mutual-funds.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
 <p>Mutual Funds</p>
 </a>
+
 <a href="loans.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
 <p>Loans</p>
 </a>
+
 </div>
 </div>
 
-<!-- ==================== PRODUCTS ==================== -->
 <div class="products">
 <h2>Featured Services</h2>
 <div class="product-grid">
@@ -328,14 +316,12 @@ body{
 </div>
 </div>
 
-<!-- ==================== CRAFTING / TRUST ==================== -->
 <div class="crafting">
 <h2>Why Choose COVEA</h2>
 <p>Trusted Experts • Secure Planning • Long-Term Growth</p>
 <p>500+ Clients | ₹10Cr+ Managed | 5+ Years Experience</p>
 </div>
 
-<!-- ==================== FOOTER ==================== -->
 <div class="footer">
 <div>
 <h3>COVEA</h3>
@@ -349,12 +335,10 @@ body{
 </div>
 </div>
 
-<!-- ==================== WHATSAPP ==================== -->
 <a href="https://wa.me/918800208059" class="whatsapp">
 <img src="https://img.icons8.com/color/96/whatsapp.png">
 </a>
 
-<!-- ==================== MODAL FORM ==================== -->
 <div class="modal" id="formModal">
 <div class="modal-box">
 <h3>Sign In</h3>
