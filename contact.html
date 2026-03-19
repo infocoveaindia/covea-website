@@ -1,63 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact - COVEA</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - COVEA</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4efec;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:white;
+}
+.logo{
+    font-weight:bold;
+    color:#5b3a36;
+    text-decoration:none;
+}
+
+/* HEADING */
+.header{
+    text-align:center;
+    padding:40px 20px;
+}
+.header h2{
+    margin-bottom:10px;
+}
+
+/* CARDS */
+.container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+.card{
+    background:white;
+    padding:25px;
+    width:220px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.card h3{
+    margin-bottom:10px;
+}
+.card p{
+    font-size:14px;
+    margin-bottom:15px;
+}
+.card button{
+    padding:8px 15px;
+    background:#6b4a46;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* LOCATION */
+.location{
+    margin:30px auto;
+    width:220px;
+}
+
+/* FOOTER */
+.footer{
+    background:#6b4a46;
+    color:white;
+    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>COVEA</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<!-- NAVBAR -->
+<div class="navbar">
+<a href="index.html" class="logo">COVEA</a>
+</div>
 
-<section class="hero">
-  <h2>Contact Us</h2>
-  <p>Get in touch with our experts</p>
-</section>
+<!-- HEADER -->
+<div class="header">
+<h2>Contact Us</h2>
+<p>We are always happy to help you. Reach us anytime for support.</p>
+</div>
 
-<section style="padding:50px; text-align:center;">
-  
-  <h2>Send Inquiry</h2>
-  
-  <form>
-    <input type="text" placeholder="Your Name" required><br><br>
-    <input type="email" placeholder="Your Email" required><br><br>
-    <input type="text" placeholder="Phone Number" required><br><br>
-    <textarea placeholder="Your Message"></textarea><br><br>
-    
-    <button type="submit">Submit</button>
-  </form>
+<!-- CARDS -->
+<div class="container">
 
-  <br><br>
+<div class="card">
+<h3>WhatsApp</h3>
+<p>Chat with us for services</p>
+<button onclick="openWhatsApp()">Chat Now</button>
+</div>
 
-  <h3>OR</h3>
+<div class="card">
+<h3>Email</h3>
+<p>info.covea.india@gmail.com</p>
+<button onclick="sendEmail()">Send Email</button>
+</div>
 
-  <br>
+<div class="card">
+<h3>Instagram</h3>
+<p>@covea_official</p>
+<button onclick="openInsta()">Visit Profile</button>
+</div>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/91XXXXXXXXXX" target="_blank">
-    <button>Chat on WhatsApp</button>
-  </a>
+</div>
 
-  <br><br>
+<!-- LOCATION -->
+<div class="card location">
+<h3>Location</h3>
+<p>India</p>
+</div>
 
-  <!-- Call Button -->
-  <a href="tel:+91XXXXXXXXXX">
-    <button>Call Now</button>
-  </a>
+<!-- FOOTER -->
+<div class="footer">
+<div>
+<h3>COVEA</h3>
+<p>Private Limited Company</p>
+<p>India</p>
+</div>
+<div>
+<h3>Contact</h3>
+<p>Phone: 8800208059</p>
+<p>Email: info.covea.india@gmail.com</p>
+</div>
+</div>
 
-</section>
-
-<footer>
-  <p>© 2026 COVEA PRIVATE LIMITED</p>
-</footer>
+<script>
+function openWhatsApp(){
+    window.open("https://wa.me/918800208059");
+}
+function sendEmail(){
+    window.location.href="mailto:info.covea.india@gmail.com";
+}
+function openInsta(){
+    window.location.href="comingsoon.html";
+}
+</script>
 
 </body>
 </html>
