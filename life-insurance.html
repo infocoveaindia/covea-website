@@ -12,6 +12,9 @@ body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:#f4efec;
+display:flex;
+flex-direction:column;
+min-height:100vh;
 }
 
 /* NAVBAR */
@@ -56,6 +59,7 @@ padding:10px 20px;
 .section{
 padding:40px;
 text-align:center;
+flex:1;
 }
 
 .category-grid{
@@ -95,6 +99,19 @@ padding:40px;
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
+margin-top:auto;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+.whatsapp img{
+width:55px;
 }
 
 </style>
@@ -124,7 +141,7 @@ flex-wrap:wrap;
 <div class="category-grid">
 
 <a href="protection.html" class="category-card">
-<img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <h3>Protection Solutions</h3>
 </a>
 
@@ -134,7 +151,7 @@ flex-wrap:wrap;
 </a>
 
 <a href="wealth.html" class="category-card">
-<img src="https://images.unsplash.com/photo-1565372910944-1b7b9f0c8b60">
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
 <h3>Wealth Solutions</h3>
 </a>
 
@@ -144,7 +161,7 @@ flex-wrap:wrap;
 </a>
 
 <a href="shubh.html" class="category-card">
-<img src="https://images.unsplash.com/photo-1588776814546-ec7e8b2dcf9d">
+<img src="https://images.unsplash.com/photo-1581090700227-1e8d7c6f63f1">
 <h3>Shubh Solutions</h3>
 </a>
 
@@ -174,6 +191,12 @@ flex-wrap:wrap;
 </div>
 
 </div>
+
+<!-- WHATSAPP BUTTON -->
+
+<a href="https://wa.me/918800208059" class="whatsapp">
+<img src="https://img.icons8.com/color/96/whatsapp.png">
+</a>
 
 </body>
 </html>
