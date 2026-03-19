@@ -10,6 +10,11 @@ body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
     background:#f4efec;
+
+    /* ✅ FOOTER FIX */
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 
 /* NAVBAR */
@@ -30,9 +35,6 @@ body{
     text-align:center;
     padding:40px 20px;
 }
-.header h2{
-    margin-bottom:10px;
-}
 
 /* CARDS */
 .container{
@@ -49,13 +51,6 @@ body{
     text-align:center;
     border-radius:10px;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-.card h3{
-    margin-bottom:10px;
-}
-.card p{
-    font-size:14px;
-    margin-bottom:15px;
 }
 .card button{
     padding:8px 15px;
@@ -80,24 +75,23 @@ body{
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
+
+    margin-top:auto; /* ✅ pushes footer bottom */
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
 </div>
 
-<!-- HEADER -->
 <div class="header">
 <h2>Contact Us</h2>
 <p>We are always happy to help you. Reach us anytime for support.</p>
 </div>
 
-<!-- CARDS -->
 <div class="container">
 
 <div class="card">
@@ -120,13 +114,11 @@ body{
 
 </div>
 
-<!-- LOCATION -->
 <div class="card location">
 <h3>Location</h3>
-<p>India</p>
+<p>New Delhi, India</p> <!-- ✅ UPDATED -->
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 <div>
 <h3>COVEA</h3>
