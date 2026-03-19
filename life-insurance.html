@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tata AIA Life Insurance - COVEA</title>
+<title>Life Insurance - COVEA</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 background:#f4efec;
 }
 
@@ -19,100 +19,82 @@ background:#f4efec;
 .navbar{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 40px;
 background:white;
 }
 
 .logo{
+font-size:22px;
 font-weight:bold;
 color:#5b3a36;
 text-decoration:none;
 }
 
-/* HEADER */
+/* HERO */
 
-.header{
+.hero{
+background:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');
+background-size:cover;
+background-position:center;
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
 text-align:center;
+}
+
+.hero h1{
+font-size:36px;
+background:rgba(0,0,0,0.5);
+padding:10px 20px;
+}
+
+/* CATEGORY SECTION */
+
+.section{
 padding:40px;
-background:#3b2624;
-color:white;
+text-align:center;
 }
 
-/* CATEGORY */
-
-.categories{
+.category-grid{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:15px;
-padding:30px;
+gap:30px;
 }
 
-.cat{
-padding:10px 18px;
-background:#6b4a46;
-color:white;
-border-radius:6px;
-cursor:pointer;
-}
-
-/* PLAN SECTION */
-
-.plans{
-display:none;
-padding:30px;
-}
-
-.plan-grid{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-}
-
-.plan{
-background:white;
-padding:20px;
+.category-card{
 width:260px;
-border-radius:8px;
+background:white;
+border-radius:10px;
+overflow:hidden;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 cursor:pointer;
+text-decoration:none;
+color:black;
 }
 
-/* MODAL FORM */
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
+.category-card img{
 width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;
-align-items:center;
+height:160px;
+object-fit:cover;
 }
 
-.modal-box{
-background:white;
-padding:20px;
-width:320px;
-border-radius:8px;
+.category-card h3{
+margin:15px 0;
 }
 
-.modal-box input, select{
-width:100%;
-margin:8px 0;
-padding:8px;
-}
+/* FOOTER */
 
-button{
+.footer{
 background:#6b4a46;
 color:white;
-border:none;
-padding:10px;
-cursor:pointer;
-width:100%;
+padding:40px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
 }
 
 </style>
@@ -121,105 +103,77 @@ width:100%;
 
 <body>
 
+<!-- NAVBAR -->
+
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
 </div>
 
-<div class="header">
-<h1>Tata AIA Life Insurance</h1>
-<p>Select Category → Choose Plan → Get Instant Quote</p>
+<!-- HERO -->
+
+<div class="hero">
+<h1>Life Insurance Solutions</h1>
 </div>
 
-<!-- CATEGORIES -->
+<!-- CATEGORY SECTION -->
 
-<div class="categories">
+<div class="section">
 
-<div class="cat" onclick="showPlans('protection')">Protection Plan</div>
-<div class="cat" onclick="showPlans('wealth')">Wealth Plan</div>
-<div class="cat" onclick="showPlans('retirement')">Retirement Plan</div>
-<div class="cat" onclick="showPlans('saving')">Saving Plan</div>
-<div class="cat" onclick="showPlans('shubhlabh')">Shubh Labh Plan</div>
+<h2>Select Category</h2>
+
+<div class="category-grid">
+
+<a href="protection.html" class="category-card">
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f">
+<h3>Protection Solutions</h3>
+</a>
+
+<a href="savings.html" class="category-card">
+<img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d">
+<h3>Savings Solutions</h3>
+</a>
+
+<a href="wealth.html" class="category-card">
+<img src="https://images.unsplash.com/photo-1565372910944-1b7b9f0c8b60">
+<h3>Wealth Solutions</h3>
+</a>
+
+<a href="retirement.html" class="category-card">
+<img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2">
+<h3>Retirement Solutions</h3>
+</a>
+
+<a href="shubh.html" class="category-card">
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e8b2dcf9d">
+<h3>Shubh Solutions</h3>
+</a>
+
+<a href="health.html" class="category-card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<h3>Health Solutions</h3>
+</a>
 
 </div>
 
-<!-- PLANS -->
-
-<div id="plans" class="plans">
-<div class="plan-grid" id="planList"></div>
 </div>
 
-<!-- FORM -->
+<!-- FOOTER -->
 
-<div class="modal" id="formModal">
-<div class="modal-box">
+<div class="footer">
 
-<h3>Get Quote</h3>
-
-<input id="dob" type="date">
-<input id="income" placeholder="Annual Income">
-
-<select id="type">
-<option>Salaried</option>
-<option>Business</option>
-</select>
-
-<input id="phone" placeholder="Phone Number">
-
-<button onclick="submitForm()">Submit</button>
-
-</div>
+<div>
+<h3>COVEA</h3>
+<p>Private Limited Company</p>
+<p>India</p>
 </div>
 
-<script>
+<div>
+<h3>Contact</h3>
+<p>Phone: 8800208059</p>
+<p>Email: info.covea.india@gmail.com</p>
+</div>
 
-const data={
-protection:[
-"Sampoorna Raksha Supreme",
-"Saral Jeevan Bima",
-"Raksha TPA Plan",
-"Term Secure Plus",
-"Life Guard Plan",
-"Family Protection Plan"
-],
-wealth:[
-"Fortune Pro",
-"Wealth Pro Plan",
-"Smart Wealth Builder"
-],
-retirement:[
-"Retire Smart Plan",
-"Pension Builder Plan"
-],
-saving:[
-"Smart Saving Plan",
-"Guaranteed Return Plan"
-],
-shubhlabh:[
-"Shubh Labh Plan",
-"Shubh Return Plan"
-]
-};
+</div>
 
-function showPlans(type){
-let list=data[type];
-let html="";
-
-list.forEach(plan=>{
-html+=`<div class="plan" onclick="openForm('${plan}')">${plan}</div>`;
-});
-
-document.getElementById("planList").innerHTML=html;
-document.getElementById("plans").style.display="block";
-}
-
-let selectedPlan="";
-
-function openForm(plan){
-selectedPlan=plan;
-document.getElementById("formModal").style.display="flex";
-}
-
-function submitForm(){
-
-let dob=document.getElementById("dob").value;
-let income=document.getElementById("income").
+</body>
+</html>
