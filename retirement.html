@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Retirement Plans - COVEA</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4efec;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+background:white;
+}
+
+.logo{
+font-weight:bold;
+color:#5b3a36;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+background:url('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2');
+background-size:cover;
+background-position:center;
+height:260px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.5);
+padding:10px 20px;
+}
+
+/* PLANS */
+
+.section{
+padding:30px;
+text-align:center;
+flex:1;
+}
+
+.plan-grid{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.plan{
+background:white;
+width:260px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.plan img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.plan h3{
+padding:15px;
+font-size:14px;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-box{
+background:white;
+padding:20px;
+width:300px;
+border-radius:8px;
+}
+
+.modal-box input, select{
+width:100%;
+margin:8px 0;
+padding:8px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#6b4a46;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.footer{
+background:#6b4a46;
+color:white;
+padding:40px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+margin-top:auto;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+.whatsapp img{
+width:55px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="life-insurance.html" class="logo">COVEA</a>
+</div>
+
+<div class="hero">
+<h1>Retirement Plans - Tata AIA</h1>
+</div>
+
+<div class="section">
+
+<div class="plan-grid">
+
+<div class="plan" onclick="openForm('Fortune Guarantee Pension')">
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
+<h3>Fortune Guarantee Pension</h3>
+</div>
+
+<div class="plan" onclick="openForm('Saral Pension')">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<h3>Saral Pension</h3>
+</div>
+
+<div class="plan" onclick="openForm('Smart Annuity Plan')">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+<h3>Smart Annuity Plan</h3>
+</div>
+
+<div class="plan" onclick="openForm('Fortune Guarantee Retirement Ready')">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<h3>Fortune Guarantee Retirement Ready</h3>
+</div>
+
+<div class="plan" onclick="openForm('Premier Pension Secure')">
+<img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2">
+<h3>Premier Pension Secure</h3>
+</div>
+
+</div>
+
+</div>
+
+<!-- FORM -->
+
+<div class="modal" id="formModal">
+<div class="modal-box">
+
+<h3>Get Quote</h3>
+
+<input id="dob" type="date">
+<input id="income" placeholder="Annual Income">
+
+<select id="type">
+<option>Salaried</option>
+<option>Business</option>
+</select>
+
+<input id="phone" placeholder="Phone Number">
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<div>
+<h3>COVEA</h3>
+<p>Private Limited Company</p>
+<p>India</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>Phone: 8800208059</p>
+<p>Email: info.covea.india@gmail.com</p>
+</div>
+
+</div>
+
+<a href="https://wa.me/918800208059" class="whatsapp">
+<img src="https://img.icons8.com/color/96/whatsapp.png">
+</a>
+
+<script>
+
+let selectedPlan="";
+
+function openForm(plan){
+selectedPlan=plan;
+document.getElementById("formModal").style.display="flex";
+}
+
+function submitForm(){
+
+let dob=document.getElementById("dob").value;
+let income=document.getElementById("income").value;
+let type=document.getElementById("type").value;
+let phone=document.getElementById("phone").value;
+
+let msg=`Plan:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
+
+window.location.href=`https://wa.me/918800208059?text=${msg}`;
+}
+
+</script>
+
+</body>
+</html>
