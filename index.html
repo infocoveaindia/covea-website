@@ -1,270 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Covea Wealth Solutions Pvt. Ltd.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covea Wealth Solutions</title>
 
-<style>
-body{
-    margin:0;
-    font-family: 'Montserrat', Arial;
-    background:#000;
-    color:white;
-}
-
-/* TOP BAR */
-.topbar{
-    background:#000;
-    color:#C9A14A;
-    padding:8px;
-    text-align:center;
-}
-
-/* NAVBAR */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background:#000;
-    border-bottom:1px solid #C9A14A;
-}
-.logo{
-    font-size:20px;
-    font-weight:bold;
-    color:#C9A14A;
-    text-decoration:none;
-}
-.nav-links a{
-    margin:0 15px;
-    text-decoration:none;
-    color:white;
-}
-.nav-buttons button{
-    padding:8px 15px;
-    border:none;
-    background:#C9A14A;
-    color:black;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-/* HERO */
-.hero{
-    position:relative;
-    text-align:center;
-}
-.hero img{
-    width:100%;
-    height:450px;
-    object-fit:cover;
-    opacity:0.3;
-}
-.hero-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-}
-.hero-text h1{
-    font-size:38px;
-    margin:0;
-    color:#C9A14A;
-}
-.hero-text p{
-    margin-top:10px;
-}
-.hero-text button{
-    margin-top:15px;
-    padding:10px 20px;
-    background:#C9A14A;
-    border:none;
-    color:black;
-    border-radius:5px;
-}
-
-/* SERVICES */
-.category{
-    padding:50px;
-    text-align:center;
-}
-.category h2{
-    color:#C9A14A;
-}
-.category-list{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-.category-item{
-    color:white;
-    text-decoration:none;
-}
-.category-item img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-}
-
-/* PRODUCTS */
-.products{
-    padding:40px;
-    text-align:center;
-}
-.products h2{
-    color:#C9A14A;
-}
-.product{
-    background:#111;
-    padding:20px;
-    border-radius:10px;
-    width:220px;
-    border:1px solid #C9A14A;
-}
-.product button{
-    background:#C9A14A;
-    color:black;
-}
-
-/* WHY SECTION */
-.crafting{
-    text-align:center;
-    padding:40px;
-}
-.crafting h2{
-    color:#C9A14A;
-}
-
-/* FOOTER */
-.footer{
-    background:#000;
-    color:#C9A14A;
-    padding:40px;
-    display:flex;
-    justify-content:space-between;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-}
-.whatsapp img{
-    width:55px;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="topbar">
-Wealth • Protection • Growth
-</div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-content">
+    <div class="logo">COVEA</div>
 
-<div class="navbar">
-<a href="index.html" class="logo">COVEA WEALTH</a>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="categories.html">Services</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</div>
+    <button class="btn-outline">Sign In</button>
+  </div>
+</header>
 
-<div class="nav-buttons">
-<button onclick="openForm()">Sign In</button>
-</div>
-</div>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container hero-content">
+    <div>
+      <h1>Building Long-Term Financial Security</h1>
+      <p>Trusted wealth management, investment planning and protection solutions for your future.</p>
 
-<div class="hero">
-<img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d">
-<div class="hero-text">
-<h1>COVEA WEALTH SOLUTIONS</h1>
-<p>PVT. LTD.</p>
-<p>Building Long-Term Financial Security</p>
-<button onclick="openForm()">Get Started</button>
-</div>
-</div>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Get Started</a>
+        <a href="#" class="btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="category">
-<h2>Our Services</h2>
-<div class="category-list">
+<!-- SERVICES (CLEAN GRID) -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
 
-<a href="life-insurance.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<p>Life Insurance</p>
-</a>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Wealth Management</h3>
+        <p>Personalized strategies to grow and preserve your wealth.</p>
+      </div>
 
-<a href="healthinsurance.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<p>Health Insurance</p>
-</a>
+      <div class="card">
+        <h3>Investment Planning</h3>
+        <p>Smart investment solutions aligned with your financial goals.</p>
+      </div>
 
-<a href="mutual-funds.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<p>Mutual Funds</p>
-</a>
+      <div class="card">
+        <h3>Risk Protection</h3>
+        <p>Comprehensive insurance coverage for long-term security.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<a href="loans.html" class="category-item">
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
-<p>Loans</p>
-</a>
+<!-- WHY CHOOSE US -->
+<section class="section light-bg">
+  <div class="container">
+    <h2 class="section-title">Why Choose Covea</h2>
 
-</div>
-</div>
+    <div class="grid-3">
+      <div class="feature">
+        <h3>Trusted Experts</h3>
+        <p>Professional guidance backed by industry experience.</p>
+      </div>
 
-<div class="products">
-<h2>Featured Services</h2>
-<div class="product-grid">
+      <div class="feature">
+        <h3>Secure Planning</h3>
+        <p>Strategies focused on stability and long-term growth.</p>
+      </div>
 
-<div class="product">
-<h4>Wealth Management</h4>
-<button onclick="openForm()">Get Details</button>
-</div>
+      <div class="feature">
+        <h3>Client Focused</h3>
+        <p>Solutions tailored to your financial needs and goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="product">
-<h4>Investment Planning</h4>
-<button onclick="openForm()">Get Details</button>
-</div>
+<!-- STATS -->
+<section class="section">
+  <div class="container stats">
+    <div>
+      <h2>500+</h2>
+      <p>Clients</p>
+    </div>
 
-<div class="product">
-<h4>Risk Protection</h4>
-<button onclick="openForm()">Get Details</button>
-</div>
+    <div>
+      <h2>₹10Cr+</h2>
+      <p>Assets Managed</p>
+    </div>
 
-</div>
-</div>
+    <div>
+      <h2>5+ Years</h2>
+      <p>Experience</p>
+    </div>
+  </div>
+</section>
 
-<div class="crafting">
-<h2>Why Choose COVEA</h2>
-<p>Trusted Experts • Secure Planning • Long-Term Growth</p>
-<p>500+ Clients | ₹10Cr+ Managed | 5+ Years Experience</p>
-</div>
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Start Your Financial Journey Today</h2>
+    <a href="#" class="btn-primary">Get Started</a>
+  </div>
+</section>
 
-<div class="footer">
-<div>
-<h3>COVEA WEALTH SOLUTIONS</h3>
-<p>Pvt. Ltd.</p>
-</div>
-<div>
-<h3>Contact</h3>
-<p>Phone: 8800208059</p>
-<p>Email: info.covea.india@gmail.com</p>
-</div>
-</div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
 
-<a href="https://wa.me/918800208059" class="whatsapp">
-<img src="https://img.icons8.com/color/96/whatsapp.png">
-</a>
+    <div>
+      <h3>Covea Wealth Solutions</h3>
+      <p>Building long-term financial security for individuals and businesses.</p>
+    </div>
 
-<script>
-function openForm(){
-    alert("Form coming soon");
-}
-</script>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Phone: 8800208059</p>
+      <p>Email: info.covea.india@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Covea Wealth Solutions Pvt. Ltd. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
