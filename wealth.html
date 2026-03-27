@@ -4,41 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wealth Plans - COVEA</title>
+<title>Wealth Management - COVEA</title>
 
 <style>
 
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-margin:0;
-font-family:Arial;
-background:#f4efec;
+font-family:'Inter', Arial;
+background:#fff;
 display:flex;
 flex-direction:column;
 min-height:100vh;
+color:#111;
+}
+
+/* TOPBAR */
+.topbar{
+background:#000;
+color:#fff;
+text-align:center;
+padding:6px;
+font-size:13px;
+letter-spacing:1px;
 }
 
 /* NAVBAR */
-
 .navbar{
 display:flex;
 justify-content:space-between;
-padding:15px 40px;
-background:white;
+padding:18px 50px;
+border-bottom:1px solid #eee;
+background:#fff;
 }
 
 .logo{
-font-weight:bold;
-color:#5b3a36;
+font-weight:700;
+font-size:20px;
 text-decoration:none;
+color:#000;
 }
 
 /* HERO */
-
 .hero{
-background:url('https://images.unsplash.com/photo-1565372910944-1b7b9f0c8b60');
+background:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');
 background-size:cover;
 background-position:center;
-height:260px;
+height:320px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -46,47 +59,66 @@ color:white;
 }
 
 .hero h1{
-background:rgba(0,0,0,0.5);
-padding:10px 20px;
+background:rgba(0,0,0,0.6);
+padding:12px 25px;
+font-size:32px;
 }
 
-/* PLANS */
-
+/* SECTION */
 .section{
-padding:30px;
+padding:70px 50px;
 text-align:center;
-flex:1;
 }
 
-.plan-grid{
+.section h2{
+margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
 display:flex;
 flex-wrap:wrap;
-gap:20px;
+gap:30px;
 justify-content:center;
 }
 
-.plan{
-background:white;
-width:260px;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+.card{
+background:#fff;
+width:280px;
+border:1px solid #eee;
+padding:25px;
 cursor:pointer;
+transition:0.3s;
+text-align:left;
 }
 
-.plan img{
-width:100%;
-height:150px;
-object-fit:cover;
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
 }
 
-.plan h3{
-padding:15px;
-font-size:14px;
+/* PROCESS */
+.process{
+background:#f7f7f7;
+padding:70px;
+text-align:center;
+}
+
+.process-grid{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.process-box{
+background:#fff;
+padding:25px;
+width:250px;
+border:1px solid #eee;
 }
 
 /* MODAL */
-
 .modal{
 display:none;
 position:fixed;
@@ -98,99 +130,135 @@ align-items:center;
 }
 
 .modal-box{
-background:white;
-padding:20px;
-width:300px;
-border-radius:8px;
+background:#fff;
+padding:25px;
+width:320px;
+border-radius:6px;
 }
 
 .modal-box input, select{
 width:100%;
 margin:8px 0;
-padding:8px;
+padding:10px;
 }
 
 button{
 width:100%;
-padding:10px;
-background:#6b4a46;
-color:white;
+padding:12px;
+background:#000;
+color:#fff;
 border:none;
 cursor:pointer;
 }
 
 /* FOOTER */
-
 .footer{
-background:#6b4a46;
-color:white;
-padding:40px;
+background:#111;
+color:#aaa;
+padding:50px;
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
 margin-top:auto;
 }
 
-/* WHATSAPP */
+.footer h3{color:#fff;}
 
+.footer-bottom{
+text-align:center;
+padding:12px;
+background:#000;
+color:#aaa;
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 }
-
 .whatsapp img{
 width:55px;
 }
 
 </style>
-
 </head>
 
 <body>
 
+<div class="topbar">
+COVEA — Wealth. Strategy. Growth.
+</div>
+
 <div class="navbar">
-<a href="life-insurance.html" class="logo">COVEA</a>
+<a href="index.html" class="logo">COVEA</a>
 </div>
 
 <div class="hero">
-<h1>Wealth Plans - Tata AIA</h1>
+<h1>Wealth Management Solutions</h1>
 </div>
 
 <div class="section">
+<h2>Investment Strategies</h2>
 
-<div class="plan-grid">
+<div class="grid">
 
-<div class="plan" onclick="openForm('Param Raksha')"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"><h3>Param Raksha</h3></div>
-
-<div class="plan" onclick="openForm('Smart SIP')"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"><h3>Smart SIP</h3></div>
-
-<div class="plan" onclick="openForm('Smart Fortune Plus')"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692"><h3>Smart Fortune Plus</h3></div>
-
-<div class="plan" onclick="openForm('Wealth Pro')"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><h3>Wealth Pro</h3></div>
-
-<div class="plan" onclick="openForm('Fortune Pro')"><img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2"><h3>Fortune Pro</h3></div>
-
-<div class="plan" onclick="openForm('Fortune Maxima')"><img src="https://images.unsplash.com/photo-1565372910944-1b7b9f0c8b60"><h3>Fortune Maxima</h3></div>
-
-<div class="plan" onclick="openForm('Wealth Maxima')"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309"><h3>Wealth Maxima</h3></div>
-
-<div class="plan" onclick="openForm('Smart Sampoorna Raksha Pro')"><img src="https://images.unsplash.com/photo-1581090700227-1e8d7c6f63f1"><h3>Smart Sampoorna Raksha Pro</h3></div>
-
-<div class="plan" onclick="openForm('Premier SIP')"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"><h3>Premier SIP</h3></div>
-
-<div class="plan" onclick="openForm('Smart Sampoorna Raksha Plus')"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"><h3>Smart Sampoorna Raksha Plus</h3></div>
-
+<div class="card" onclick="openForm('Growth Portfolio')">
+<h3>Growth Portfolio</h3>
+<p>Long-term equity focused strategies for capital appreciation.</p>
 </div>
 
+<div class="card" onclick="openForm('Balanced Portfolio')">
+<h3>Balanced Portfolio</h3>
+<p>Equity + debt allocation for stable growth and risk control.</p>
+</div>
+
+<div class="card" onclick="openForm('Income Portfolio')">
+<h3>Income Portfolio</h3>
+<p>Regular income generation with low-risk instruments.</p>
+</div>
+
+<div class="card" onclick="openForm('High Net Worth Portfolio')">
+<h3>HNI Portfolio</h3>
+<p>Customized strategies for high-value investors.</p>
+</div>
+
+</div>
+</div>
+
+<div class="process">
+<h2>Our Investment Process</h2>
+
+<div class="process-grid">
+
+<div class="process-box">
+<h3>01. Analyze</h3>
+<p>Understand goals & risk profile</p>
+</div>
+
+<div class="process-box">
+<h3>02. Allocate</h3>
+<p>Asset allocation strategy</p>
+</div>
+
+<div class="process-box">
+<h3>03. Execute</h3>
+<p>Disciplined investments</p>
+</div>
+
+<div class="process-box">
+<h3>04. Monitor</h3>
+<p>Continuous optimization</p>
+</div>
+
+</div>
 </div>
 
 <!-- FORM -->
-
 <div class="modal" id="formModal">
 <div class="modal-box">
 
-<h3>Get Quote</h3>
+<h3>Start Investing</h3>
 
 <input id="dob" type="date">
 <input id="income" placeholder="Annual Income">
@@ -208,21 +276,21 @@ width:55px;
 </div>
 
 <!-- FOOTER -->
-
 <div class="footer">
-
 <div>
-<h3>COVEA</h3>
-<p>Private Limited Company</p>
+<h3>Covea Wealth Solutions Pvt. Ltd.</h3>
 <p>India</p>
 </div>
 
 <div>
 <h3>Contact</h3>
-<p>Phone: 8800208059</p>
-<p>Email: info.covea.india@gmail.com</p>
+<p>+91 8800208059</p>
+<p>info.covea.india@gmail.com</p>
+</div>
 </div>
 
+<div class="footer-bottom">
+© 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
 
 <a href="https://wa.me/918800208059" class="whatsapp">
@@ -239,13 +307,12 @@ document.getElementById("formModal").style.display="flex";
 }
 
 function submitForm(){
-
 let dob=document.getElementById("dob").value;
 let income=document.getElementById("income").value;
 let type=document.getElementById("type").value;
 let phone=document.getElementById("phone").value;
 
-let msg=`Plan:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
+let msg=`Portfolio:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
 
 window.location.href=`https://wa.me/918800208059?text=${msg}`;
 }
