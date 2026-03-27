@@ -41,11 +41,11 @@ body{
 .logo{
   font-size:20px;
   font-weight:700;
-  letter-spacing:1px;
   text-decoration:none;
   color:#000;
 }
 
+/* NAV LINKS */
 .nav-links a{
   margin:0 18px;
   text-decoration:none;
@@ -87,11 +87,6 @@ body{
   font-size:40px;
 }
 
-.hero p{
-  margin-top:10px;
-  color:#ccc;
-}
-
 /* SECTION */
 .section{
   padding:70px 50px;
@@ -100,10 +95,9 @@ body{
 
 .section h2{
   margin-bottom:40px;
-  font-size:30px;
 }
 
-/* SERVICES GRID */
+/* GRID */
 .grid{
   display:flex;
   justify-content:center;
@@ -118,15 +112,13 @@ body{
   text-align:left;
   transition:0.3s;
   cursor:pointer;
+  text-decoration:none;
+  color:#000;
 }
 
 .card:hover{
   transform:translateY(-10px);
   box-shadow:0 12px 30px rgba(0,0,0,0.1);
-}
-
-.card h3{
-  margin-bottom:10px;
 }
 
 /* PROCESS */
@@ -148,6 +140,13 @@ body{
   padding:25px;
   border:1px solid #eee;
   background:#fff;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.process-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* CTA */
@@ -190,12 +189,10 @@ body{
 
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">
 COVEA — Wealth. Strategy. Growth.
 </div>
 
-<!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
 
@@ -207,10 +204,9 @@ COVEA — Wealth. Strategy. Growth.
 </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
 <h2>Our Services</h2>
-<p>Institutional-grade financial solutions designed for long-term growth.</p>
+<p>Institutional-grade financial solutions</p>
 </div>
 
 <!-- SERVICES -->
@@ -219,25 +215,25 @@ COVEA — Wealth. Strategy. Growth.
 
 <div class="grid">
 
-<div class="card">
+<a href="wealth.html" class="card">
 <h3>Wealth Management</h3>
-<p>Comprehensive portfolio construction, asset allocation, and long-term capital growth strategies.</p>
-</div>
+<p>Portfolio construction & long-term capital growth.</p>
+</a>
 
-<div class="card">
+<a href="investment.html" class="card">
 <h3>Investment Planning</h3>
-<p>Goal-based investment strategies aligned with market insights and economic cycles.</p>
-</div>
+<p>Goal-based investing aligned with market cycles.</p>
+</a>
 
-<div class="card">
+<a href="risk.html" class="card">
 <h3>Risk Protection</h3>
-<p>Insurance solutions designed to protect wealth and ensure financial stability.</p>
-</div>
+<p>Protect your wealth with structured coverage.</p>
+</a>
 
-<div class="card">
+<a href="retirement.html" class="card">
 <h3>Retirement Planning</h3>
-<p>Structured long-term plans to secure financial independence and future income.</p>
-</div>
+<p>Secure long-term income & financial independence.</p>
+</a>
 
 </div>
 </div>
@@ -248,36 +244,34 @@ COVEA — Wealth. Strategy. Growth.
 
 <div class="process-grid">
 
-<div class="process-card">
+<a href="process-analyze.html" class="process-card">
 <h3>01. Analyze</h3>
-<p>Understanding your financial goals and risk profile.</p>
-</div>
+<p>Understand goals & risk profile</p>
+</a>
 
-<div class="process-card">
+<a href="process-strategy.html" class="process-card">
 <h3>02. Strategize</h3>
-<p>Designing a tailored portfolio based on research.</p>
-</div>
+<p>Design investment framework</p>
+</a>
 
-<div class="process-card">
+<a href="process-execute.html" class="process-card">
 <h3>03. Execute</h3>
-<p>Implementing disciplined investment strategies.</p>
-</div>
+<p>Deploy capital efficiently</p>
+</a>
 
-<div class="process-card">
+<a href="process-monitor.html" class="process-card">
 <h3>04. Monitor</h3>
-<p>Continuous tracking and optimization of performance.</p>
-</div>
+<p>Track & optimize portfolio</p>
+</a>
 
 </div>
 </div>
 
-<!-- CTA -->
 <div class="cta">
 <h2>Start Building Your Portfolio</h2>
 <a href="contact.html">Talk to an Advisor</a>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 <div>
 <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
