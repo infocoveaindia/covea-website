@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Investment Planning - COVEA</title>
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Inter', Arial;
+background:#fff;
+color:#111;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* TOPBAR */
+.topbar{
+background:#000;
+color:#fff;
+text-align:center;
+padding:6px;
+font-size:13px;
+letter-spacing:1px;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:18px 50px;
+border-bottom:1px solid #eee;
+background:#fff;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+text-decoration:none;
+color:#000;
+}
+
+/* HERO */
+.hero{
+background:url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e');
+background-size:cover;
+background-position:center;
+height:320px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.6);
+padding:12px 25px;
+font-size:32px;
+}
+
+/* SECTION */
+.section{
+padding:70px 50px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.card{
+background:#fff;
+width:280px;
+border:1px solid #eee;
+padding:25px;
+cursor:pointer;
+transition:0.3s;
+text-align:left;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* PROCESS */
+.process{
+background:#f7f7f7;
+padding:70px;
+text-align:center;
+}
+
+.process-grid{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.process-box{
+background:#fff;
+padding:25px;
+width:250px;
+border:1px solid #eee;
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-box{
+background:#fff;
+padding:25px;
+width:320px;
+border-radius:6px;
+}
+
+.modal-box input, select{
+width:100%;
+margin:8px 0;
+padding:10px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#000;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+background:#111;
+color:#aaa;
+padding:50px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+margin-top:auto;
+}
+
+.footer h3{color:#fff;}
+
+.footer-bottom{
+text-align:center;
+padding:12px;
+background:#000;
+color:#aaa;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+.whatsapp img{
+width:55px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+COVEA — Wealth. Strategy. Growth.
+</div>
+
+<div class="navbar">
+<a href="index.html" class="logo">COVEA</a>
+</div>
+
+<div class="hero">
+<h1>Investment Planning</h1>
+</div>
+
+<div class="section">
+<h2>Investment Solutions</h2>
+
+<div class="grid">
+
+<div class="card" onclick="openForm('SIP Investment Plan')">
+<h3>SIP Planning</h3>
+<p>Disciplined investing through systematic investment plans.</p>
+</div>
+
+<div class="card" onclick="openForm('Lump Sum Investment')">
+<h3>Lump Sum Investment</h3>
+<p>Strategic allocation for large capital deployment.</p>
+</div>
+
+<div class="card" onclick="openForm('Goal-Based Investment')">
+<h3>Goal-Based Planning</h3>
+<p>Investments aligned to life goals like education & home.</p>
+</div>
+
+<div class="card" onclick="openForm('Tax Saving Investment')">
+<h3>Tax Saving</h3>
+<p>Optimized investments with tax efficiency benefits.</p>
+</div>
+
+</div>
+</div>
+
+<div class="process">
+<h2>Our Planning Approach</h2>
+
+<div class="process-grid">
+
+<div class="process-box">
+<h3>01. Understand</h3>
+<p>Identify financial goals & timelines</p>
+</div>
+
+<div class="process-box">
+<h3>02. Plan</h3>
+<p>Create structured investment roadmap</p>
+</div>
+
+<div class="process-box">
+<h3>03. Invest</h3>
+<p>Execute disciplined investment strategy</p>
+</div>
+
+<div class="process-box">
+<h3>04. Review</h3>
+<p>Track and rebalance portfolio regularly</p>
+</div>
+
+</div>
+</div>
+
+<!-- FORM -->
+<div class="modal" id="formModal">
+<div class="modal-box">
+
+<h3>Start Investment</h3>
+
+<input id="dob" type="date">
+<input id="income" placeholder="Annual Income">
+
+<select id="type">
+<option>Salaried</option>
+<option>Business</option>
+</select>
+
+<input id="phone" placeholder="Phone Number">
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div>
+<h3>Covea Wealth Solutions Pvt. Ltd.</h3>
+<p>India</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>+91 8800208059</p>
+<p>info.covea.india@gmail.com</p>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Covea Wealth Solutions Pvt. Ltd.
+</div>
+
+<a href="https://wa.me/918800208059" class="whatsapp">
+<img src="https://img.icons8.com/color/96/whatsapp.png">
+</a>
+
+<script>
+
+let selectedPlan="";
+
+function openForm(plan){
+selectedPlan=plan;
+document.getElementById("formModal").style.display="flex";
+}
+
+function submitForm(){
+let dob=document.getElementById("dob").value;
+let income=document.getElementById("income").value;
+let type=document.getElementById("type").value;
+let phone=document.getElementById("phone").value;
+
+let msg=`Investment:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
+
+window.location.href=`https://wa.me/918800208059?text=${msg}`;
+}
+
+</script>
+
+</body>
+</html>
