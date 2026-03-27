@@ -3,89 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COVEA Private Limited</title>
+<title>Covea Wealth Solutions Pvt. Ltd.</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4efec;
-}
-
-.topbar{
-    background:#3b2624;
+    font-family: 'Montserrat', Arial;
+    background:#000;
     color:white;
-    padding:8px;
-    overflow:hidden;
-    white-space:nowrap;
-}
-.topbar span{
-    display:inline-block;
-    padding-left:100%;
-    animation:scroll 12s linear infinite;
-}
-@keyframes scroll{
-    0%{transform:translateX(0)}
-    100%{transform:translateX(-100%)}
 }
 
+/* TOP BAR */
+.topbar{
+    background:#000;
+    color:#C9A14A;
+    padding:8px;
+    text-align:center;
+}
+
+/* NAVBAR */
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 40px;
-    background:white;
+    background:#000;
+    border-bottom:1px solid #C9A14A;
 }
 .logo{
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
-    color:#5b3a36;
+    color:#C9A14A;
     text-decoration:none;
 }
 .nav-links a{
     margin:0 15px;
     text-decoration:none;
-    color:#333;
-    cursor:pointer;
+    color:white;
 }
 .nav-buttons button{
-    margin-left:10px;
     padding:8px 15px;
     border:none;
-    background:#6b4a46;
-    color:white;
+    background:#C9A14A;
+    color:black;
     border-radius:5px;
     cursor:pointer;
 }
 
-.slider{
-    width:100%;
-    overflow:hidden;
-}
-.slides{
-    display:flex;
-    width:1400%;
-    animation:slide 80s linear infinite;
-}
-.slides img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-}
-@keyframes slide{
-    0%{transform:translateX(0)}
-    100%{transform:translateX(-50%)}
-}
-
+/* HERO */
 .hero{
     position:relative;
     text-align:center;
-    color:white;
 }
 .hero img{
     width:100%;
     height:450px;
     object-fit:cover;
+    opacity:0.3;
 }
 .hero-text{
     position:absolute;
@@ -94,8 +68,9 @@ body{
     transform:translate(-50%,-50%);
 }
 .hero-text h1{
-    font-size:42px;
+    font-size:38px;
     margin:0;
+    color:#C9A14A;
 }
 .hero-text p{
     margin-top:10px;
@@ -103,16 +78,19 @@ body{
 .hero-text button{
     margin-top:15px;
     padding:10px 20px;
-    background:#6b4a46;
+    background:#C9A14A;
     border:none;
-    color:white;
+    color:black;
     border-radius:5px;
-    cursor:pointer;
 }
 
+/* SERVICES */
 .category{
     padding:50px;
     text-align:center;
+}
+.category h2{
+    color:#C9A14A;
 }
 .category-list{
     display:flex;
@@ -121,92 +99,54 @@ body{
     flex-wrap:wrap;
 }
 .category-item{
-    cursor:pointer;
+    color:white;
     text-decoration:none;
-    color:black;
 }
 .category-item img{
     width:90px;
     height:90px;
     border-radius:50%;
-    object-fit:cover;
-}
-.category-item p{
-    margin-top:8px;
 }
 
+/* PRODUCTS */
 .products{
     padding:40px;
     text-align:center;
 }
-.product-grid{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+.products h2{
+    color:#C9A14A;
 }
 .product{
-    background:white;
+    background:#111;
     padding:20px;
     border-radius:10px;
     width:220px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-.product img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:6px;
+    border:1px solid #C9A14A;
 }
 .product button{
-    margin-top:10px;
-    background:#6b4a46;
-    color:white;
-    border:none;
-    padding:8px 15px;
-    border-radius:4px;
-    cursor:pointer;
+    background:#C9A14A;
+    color:black;
 }
 
+/* WHY SECTION */
 .crafting{
     text-align:center;
     padding:40px;
 }
+.crafting h2{
+    color:#C9A14A;
+}
 
+/* FOOTER */
 .footer{
-    background:#6b4a46;
-    color:white;
+    background:#000;
+    color:#C9A14A;
     padding:40px;
     display:flex;
     justify-content:space-between;
-    flex-wrap:wrap;
-    position:relative;
-    bottom:0;
 }
 
-.modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-    justify-content:center;
-    align-items:center;
-}
-.modal-box{
-    background:white;
-    padding:20px;
-    width:300px;
-    border-radius:8px;
-}
-.modal-box input{
-    width:100%;
-    margin:8px 0;
-    padding:8px;
-}
-
+/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -221,16 +161,16 @@ body{
 <body>
 
 <div class="topbar">
-<span>Innovation Solution for Tomorrow</span>
+Wealth • Protection • Growth
 </div>
 
 <div class="navbar">
-<a href="index.html" class="logo">COVEA</a>
+<a href="index.html" class="logo">COVEA WEALTH</a>
 
 <div class="nav-links">
 <a href="index.html">Home</a>
-<a href="categories.html">Categories</a>
-<a href="about.html">About</a> <!-- CHANGED -->
+<a href="categories.html">Services</a>
+<a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </div>
 
@@ -239,31 +179,12 @@ body{
 </div>
 </div>
 
-<div class="slider">
-<div class="slides">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-</div>
-</div>
-
 <div class="hero">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d">
 <div class="hero-text">
-<h1>COVEA PRIVATE LIMITED</h1>
-<p>Innovation Solution for Tomorrow</p>
+<h1>COVEA WEALTH SOLUTIONS</h1>
+<p>PVT. LTD.</p>
+<p>Building Long-Term Financial Security</p>
 <button onclick="openForm()">Get Started</button>
 </div>
 </div>
@@ -277,7 +198,7 @@ body{
 <p>Life Insurance</p>
 </a>
 
-<a href="healthinsurance.html" class="category-item"> <!-- CHANGED -->
+<a href="healthinsurance.html" class="category-item">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <p>Health Insurance</p>
 </a>
@@ -298,21 +219,22 @@ body{
 <div class="products">
 <h2>Featured Services</h2>
 <div class="product-grid">
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 <h4>Wealth Management</h4>
 <button onclick="openForm()">Get Details</button>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <h4>Investment Planning</h4>
 <button onclick="openForm()">Get Details</button>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<h4>Insurance Solutions</h4>
+<h4>Risk Protection</h4>
 <button onclick="openForm()">Get Details</button>
 </div>
+
 </div>
 </div>
 
@@ -324,9 +246,8 @@ body{
 
 <div class="footer">
 <div>
-<h3>COVEA</h3>
-<p>Private Limited Company</p>
-<p>India</p>
+<h3>COVEA WEALTH SOLUTIONS</h3>
+<p>Pvt. Ltd.</p>
 </div>
 <div>
 <h3>Contact</h3>
@@ -339,32 +260,11 @@ body{
 <img src="https://img.icons8.com/color/96/whatsapp.png">
 </a>
 
-<div class="modal" id="formModal">
-<div class="modal-box">
-<h3>Sign In</h3>
-<input id="name" placeholder="Name">
-<input id="phone" placeholder="Phone">
-<input id="email" placeholder="Email">
-<input id="age" placeholder="Age">
-<input id="income" placeholder="Annual Income">
-<button onclick="submitForm()">Submit</button>
-</div>
-</div>
-
 <script>
 function openForm(){
-    document.getElementById("formModal").style.display="flex";
-}
-function submitForm(){
-    let name=document.getElementById("name").value;
-    let phone=document.getElementById("phone").value;
-    let email=document.getElementById("email").value;
-    let age=document.getElementById("age").value;
-    let income=document.getElementById("income").value;
-
-    let msg=`Name:${name}%0APhone:${phone}%0AEmail:${email}%0AAge:${age}%0AIncome:${income}`;
-    window.open(`https://wa.me/918800208059?text=${msg}`);
+    alert("Form coming soon");
 }
 </script>
+
 </body>
 </html>
