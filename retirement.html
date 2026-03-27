@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Retirement Planning - COVEA</title>
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Inter', Arial, sans-serif;
+background:#fff;
+color:#111;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* TOPBAR */
+.topbar{
+background:#000;
+color:#fff;
+text-align:center;
+padding:6px;
+font-size:13px;
+letter-spacing:1px;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+border-bottom:1px solid #eee;
+background:#fff;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+text-decoration:none;
+color:#000;
+}
+
+/* HERO */
+.hero{
+background:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+background-size:cover;
+background-position:center;
+height:320px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.6);
+padding:12px 25px;
+font-size:34px;
+}
+
+/* SECTION */
+.section{
+padding:80px 60px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:40px;
+font-size:30px;
+}
+
+/* GRID */
+.grid{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.card{
+width:280px;
+border:1px solid #eee;
+padding:25px;
+text-align:left;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* PROCESS */
+.process{
+background:#f7f7f7;
+padding:80px 60px;
+text-align:center;
+}
+
+.process-grid{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.process-box{
+width:250px;
+background:#fff;
+padding:25px;
+border:1px solid #eee;
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-box{
+background:#fff;
+padding:25px;
+width:320px;
+}
+
+.modal-box input, select{
+width:100%;
+margin:8px 0;
+padding:10px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#000;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+background:#111;
+color:#aaa;
+padding:60px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+margin-top:auto;
+}
+
+.footer h3{color:#fff;}
+
+.footer-bottom{
+text-align:center;
+padding:12px;
+background:#000;
+color:#aaa;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+.whatsapp img{
+width:55px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+COVEA — Wealth. Strategy. Growth.
+</div>
+
+<div class="navbar">
+<a href="index.html" class="logo">COVEA</a>
+</div>
+
+<div class="hero">
+<h1>Retirement Planning</h1>
+</div>
+
+<div class="section">
+<h2>Retirement Solutions</h2>
+
+<div class="grid">
+
+<div class="card" onclick="openForm('Retirement Corpus Planning')">
+<h3>Corpus Planning</h3>
+<p>Build sufficient retirement corpus aligned with future needs.</p>
+</div>
+
+<div class="card" onclick="openForm('Passive Income Strategy')">
+<h3>Passive Income</h3>
+<p>Create steady income streams post retirement.</p>
+</div>
+
+<div class="card" onclick="openForm('Inflation Planning')">
+<h3>Inflation Protection</h3>
+<p>Ensure your money retains value over time.</p>
+</div>
+
+<div class="card" onclick="openForm('Pension Strategy')">
+<h3>Pension Planning</h3>
+<p>Structured pension strategies for financial security.</p>
+</div>
+
+</div>
+</div>
+
+<div class="process">
+<h2>Our Retirement Approach</h2>
+
+<div class="process-grid">
+
+<div class="process-box">
+<h3>01. Goal Setting</h3>
+<p>Define retirement lifestyle & expenses</p>
+</div>
+
+<div class="process-box">
+<h3>02. Planning</h3>
+<p>Calculate required corpus & timeline</p>
+</div>
+
+<div class="process-box">
+<h3>03. Investment</h3>
+<p>Allocate funds strategically</p>
+</div>
+
+<div class="process-box">
+<h3>04. Income</h3>
+<p>Generate stable retirement income</p>
+</div>
+
+</div>
+</div>
+
+<!-- FORM -->
+<div class="modal" id="formModal">
+<div class="modal-box">
+
+<h3>Plan Your Retirement</h3>
+
+<input id="dob" type="date">
+<input id="income" placeholder="Annual Income">
+
+<select id="type">
+<option>Salaried</option>
+<option>Business</option>
+</select>
+
+<input id="phone" placeholder="Phone Number">
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div>
+<h3>Covea Wealth Solutions Pvt. Ltd.</h3>
+<p>India</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>+91 8800208059</p>
+<p>info.covea.india@gmail.com</p>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Covea Wealth Solutions Pvt. Ltd.
+</div>
+
+<a href="https://wa.me/918800208059" class="whatsapp">
+<img src="https://img.icons8.com/color/96/whatsapp.png">
+</a>
+
+<script>
+
+let selectedPlan="";
+
+function openForm(plan){
+selectedPlan=plan;
+document.getElementById("formModal").style.display="flex";
+}
+
+function submitForm(){
+
+let dob=document.getElementById("dob").value;
+let income=document.getElementById("income").value;
+let type=document.getElementById("type").value;
+let phone=document.getElementById("phone").value;
+
+let msg=`Retirement:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
+
+window.location.href=`https://wa.me/918800208059?text=${msg}`;
+}
+
+</script>
+
+</body>
+</html>
