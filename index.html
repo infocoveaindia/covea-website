@@ -27,7 +27,7 @@ body{
   padding:6px;
   text-align:center;
   font-size:14px;
-  letter-spacing:0.5px;
+  letter-spacing:1px;
 }
 
 /* NAVBAR */
@@ -43,35 +43,67 @@ body{
   z-index:1000;
 }
 
+/* LOGO WRAPPER */
 .logo{
-  font-size:22px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+
+/* LOGO IMAGE */
+.logo img{
+  height:42px;
+  object-fit:contain;
+}
+
+/* LOGO TEXT */
+.logo span{
+  font-size:18px;
   font-weight:700;
   letter-spacing:1px;
   color:#000;
-  text-decoration:none;
 }
 
+/* NAV LINKS */
 .nav-links a{
   margin:0 18px;
   text-decoration:none;
-  color:#333;
+  color:#444;
   font-weight:500;
   position:relative;
+  padding-bottom:5px;
+  transition:0.3s;
 }
 
-/* hover underline */
+/* underline */
 .nav-links a::after{
   content:"";
   position:absolute;
+  left:0;
+  bottom:0;
   width:0;
   height:2px;
-  bottom:-6px;
-  left:0;
   background:#000;
   transition:0.3s;
 }
 
+/* hover */
+.nav-links a:hover{
+  color:#000;
+}
+
 .nav-links a:hover::after{
+  width:100%;
+}
+
+/* active */
+.nav-links a.active{
+  color:#000;
+  font-weight:600;
+}
+
+.nav-links a.active::after{
   width:100%;
 }
 
@@ -244,20 +276,26 @@ body{
 
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
-Delivering Institutional-Grade Investment Solutions
+COVEA — Delivering Institutional-Grade Investment Solutions
 </div>
 
 <!-- NAVBAR -->
 <div class="navbar">
-<a href="index.html" class="logo">COVEA</a>
+
+<a href="index.html" class="logo">
+<img src="logo.png" alt="Covea Logo">
+<span>COVEA</span>
+</a>
 
 <div class="nav-links">
-<a href="index.html">Home</a>
+<a href="index.html" class="active">Home</a>
 <a href="services.html">Services</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </div>
+
 </div>
 
 <!-- HERO -->
