@@ -8,12 +8,19 @@
 <style>
 
 /* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:'Inter', Arial, sans-serif;
-  background:#fff;
+  background:#ffffff;
   color:#111;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
 
 /* TOPBAR */
@@ -31,27 +38,35 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 50px;
+  padding:20px 60px;
+  background:#fff;
   border-bottom:1px solid #eee;
   position:sticky;
   top:0;
-  background:#fff;
+  z-index:1000;
 }
 
 .logo{
-  font-size:20px;
+  font-size:22px;
   font-weight:700;
-  text-decoration:none;
+  letter-spacing:1px;
   color:#000;
+  text-decoration:none;
 }
 
 /* NAV LINKS */
 .nav-links a{
-  margin:0 18px;
+  margin:0 20px;
   text-decoration:none;
-  color:#444;
+  color:#555;
+  font-weight:500;
   position:relative;
-  padding-bottom:5px;
+  padding-bottom:6px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#000;
 }
 
 .nav-links a::after{
@@ -65,9 +80,13 @@ body{
   transition:0.3s;
 }
 
-.nav-links a:hover::after{width:100%;}
+.nav-links a:hover::after{
+  width:100%;
+}
 
+/* ACTIVE */
 .nav-links a.active{
+  color:#000;
   font-weight:600;
 }
 
@@ -80,73 +99,103 @@ body{
   background:#000;
   color:#fff;
   text-align:center;
-  padding:80px 20px;
+  padding:100px 20px;
 }
 
 .hero h2{
-  font-size:40px;
+  font-size:42px;
+  font-weight:700;
+}
+
+.hero p{
+  margin-top:12px;
+  color:#bbb;
+  font-size:16px;
 }
 
 /* SECTION */
 .section{
-  padding:70px 50px;
+  padding:90px 60px;
   text-align:center;
 }
 
 .section h2{
-  margin-bottom:40px;
+  font-size:32px;
+  margin-bottom:50px;
 }
 
 /* GRID */
 .grid{
   display:flex;
   justify-content:center;
-  gap:30px;
+  gap:40px;
   flex-wrap:wrap;
 }
 
+/* CARD */
 .card{
-  width:280px;
+  width:300px;
   border:1px solid #eee;
-  padding:30px;
+  padding:35px;
   text-align:left;
-  transition:0.3s;
   cursor:pointer;
+  transition:0.3s;
   text-decoration:none;
   color:#000;
+  background:#fff;
 }
 
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.1);
+  transform:translateY(-12px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  margin-bottom:12px;
+  font-size:20px;
+}
+
+.card p{
+  color:#555;
+  line-height:1.5;
 }
 
 /* PROCESS */
 .process{
   background:#f7f7f7;
-  padding:70px 40px;
+  padding:90px 60px;
   text-align:center;
+}
+
+.process h2{
+  margin-bottom:50px;
 }
 
 .process-grid{
   display:flex;
   justify-content:center;
-  gap:30px;
+  gap:40px;
   flex-wrap:wrap;
 }
 
 .process-card{
-  width:250px;
-  padding:25px;
-  border:1px solid #eee;
+  width:260px;
   background:#fff;
+  padding:30px;
+  border:1px solid #eee;
   cursor:pointer;
   transition:0.3s;
+  text-decoration:none;
+  color:#000;
 }
 
 .process-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transform:translateY(-10px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+.process-card h3{
+  margin-bottom:10px;
 }
 
 /* CTA */
@@ -154,34 +203,49 @@ body{
   background:#000;
   color:#fff;
   text-align:center;
-  padding:70px 20px;
+  padding:90px 20px;
+}
+
+.cta h2{
+  font-size:30px;
 }
 
 .cta a{
   display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
+  margin-top:25px;
+  padding:14px 30px;
   background:#fff;
   color:#000;
   text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.cta a:hover{
+  background:#ddd;
 }
 
 /* FOOTER */
 .footer{
   background:#111;
   color:#aaa;
-  padding:50px;
+  padding:60px;
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
+  margin-top:auto;
 }
 
-.footer h3{color:#fff;}
+.footer h3{
+  color:#fff;
+  margin-bottom:10px;
+}
 
 .footer-bottom{
   text-align:center;
-  padding:12px;
+  padding:14px;
   background:#000;
+  color:#aaa;
 }
 
 </style>
@@ -189,10 +253,12 @@ body{
 
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
 COVEA — Wealth. Strategy. Growth.
 </div>
 
+<!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
 
@@ -204,9 +270,10 @@ COVEA — Wealth. Strategy. Growth.
 </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
 <h2>Our Services</h2>
-<p>Institutional-grade financial solutions</p>
+<p>Institutional-grade financial solutions for long-term wealth creation</p>
 </div>
 
 <!-- SERVICES -->
@@ -217,22 +284,22 @@ COVEA — Wealth. Strategy. Growth.
 
 <a href="wealth.html" class="card">
 <h3>Wealth Management</h3>
-<p>Portfolio construction & long-term capital growth.</p>
+<p>End-to-end portfolio construction, asset allocation, and capital growth strategies.</p>
 </a>
 
 <a href="investment.html" class="card">
 <h3>Investment Planning</h3>
-<p>Goal-based investing aligned with market cycles.</p>
+<p>Goal-based investing aligned with market trends and economic cycles.</p>
 </a>
 
 <a href="risk.html" class="card">
 <h3>Risk Protection</h3>
-<p>Protect your wealth with structured coverage.</p>
+<p>Strategic protection planning to safeguard wealth and income streams.</p>
 </a>
 
 <a href="retirement.html" class="card">
 <h3>Retirement Planning</h3>
-<p>Secure long-term income & financial independence.</p>
+<p>Structured long-term income planning for financial independence.</p>
 </a>
 
 </div>
@@ -246,33 +313,36 @@ COVEA — Wealth. Strategy. Growth.
 
 <a href="process-analyze.html" class="process-card">
 <h3>01. Analyze</h3>
-<p>Understand goals & risk profile</p>
+<p>Understand financial goals & risk appetite</p>
 </a>
 
 <a href="process-strategy.html" class="process-card">
 <h3>02. Strategize</h3>
-<p>Design investment framework</p>
+<p>Create tailored portfolio strategy</p>
 </a>
 
 <a href="process-execute.html" class="process-card">
 <h3>03. Execute</h3>
-<p>Deploy capital efficiently</p>
+<p>Deploy capital with discipline</p>
 </a>
 
 <a href="process-monitor.html" class="process-card">
 <h3>04. Monitor</h3>
-<p>Track & optimize portfolio</p>
+<p>Track performance & optimize continuously</p>
 </a>
 
 </div>
 </div>
 
+<!-- CTA -->
 <div class="cta">
-<h2>Start Building Your Portfolio</h2>
+<h2>Start Building Your Portfolio Today</h2>
 <a href="contact.html">Talk to an Advisor</a>
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
+
 <div>
 <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
 <p>India</p>
@@ -283,10 +353,11 @@ COVEA — Wealth. Strategy. Growth.
 <p>+91 8800208059</p>
 <p>info.covea.india@gmail.com</p>
 </div>
+
 </div>
 
 <div class="footer-bottom">
-© 2026 Covea Wealth Solutions Pvt. Ltd.
+© 2026 Covea Wealth Solutions Pvt. Ltd. All rights reserved.
 </div>
 
 </body>
