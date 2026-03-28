@@ -3,63 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Life Insurance | Covea Risk Protection</title>
+<title>Life Insurance Growth | Covea</title>
 
 <style>
 
-/* ================= RESET ================= */
+/* RESET */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
-/* GAP CONTROL */
-h1,h2,h3,p{
-  margin:0;
-  padding:0;
-}
-
-/* ================= BODY ================= */
 body{
   font-family:'Inter', Arial, sans-serif;
   background:#fff;
   color:#111;
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
-  line-height:1.6;
 }
 
-/* ================= TOPBAR ================= */
+/* TOPBAR */
 .topbar{
   background:#000;
   color:#fff;
-  text-align:center;
   padding:6px;
+  text-align:center;
   font-size:13px;
   letter-spacing:1px;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:18px 50px;
-  border-bottom:1px solid #eee;
   background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  position:sticky;
+  top:0;
 }
 
 .logo{
-  font-weight:700;
   font-size:20px;
+  font-weight:700;
   text-decoration:none;
   color:#000;
 }
 
-/* ================= HERO ================= */
+.nav-links a{
+  margin:0 18px;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+}
+
+/* HERO */
 .hero{
-  background:url('https://images.unsplash.com/photo-1601597112563-24d5c4cd539f');
+  background:url('https://images.unsplash.com/photo-1601597112563-24d5c4cd539f?crop=entropy&cs=tinysrgb&fit=max&w=1200&h=400&q=80');
   background-size:cover;
   background-position:center;
   height:320px;
@@ -67,16 +66,16 @@ body{
   align-items:center;
   justify-content:center;
   color:#fff;
+  text-align:center;
 }
 
 .hero h1{
   background:rgba(0,0,0,0.6);
   padding:12px 25px;
-  font-size:32px;
-  text-align:center;
+  font-size:36px;
 }
 
-/* ================= SECTION ================= */
+/* SECTION */
 .section{
   padding:60px 50px;
   max-width:1000px;
@@ -84,24 +83,24 @@ body{
 }
 
 .section h2{
-  margin-bottom:30px;
   font-size:28px;
+  margin-bottom:20px;
 }
 
 .section p{
   margin-bottom:18px;
   color:#444;
   line-height:1.8;
-  font-size:16px;
+  font-size:15px;
 }
 
-/* ================= GRID ================= */
+/* GRID CARDS */
 .grid{
   display:flex;
   flex-wrap:wrap;
   gap:25px;
   justify-content:center;
-  margin-top:40px;
+  margin-top:30px;
 }
 
 .card{
@@ -119,73 +118,7 @@ body{
   box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* ================= PROCESS ================= */
-.process{
-  background:#f7f7f7;
-  padding:60px 50px;
-  text-align:center;
-}
-
-.process-grid{
-  display:flex;
-  gap:25px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:30px;
-}
-
-.process-box{
-  background:#fff;
-  padding:25px;
-  width:250px;
-  border:1px solid #eee;
-  transition:0.3s;
-}
-
-.process-box:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* ================= FORM MODAL ================= */
-.modal{
-  display:none;
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  justify-content:center;
-  align-items:center;
-  top:0;
-  left:0;
-}
-
-.modal-box{
-  background:#fff;
-  padding:30px;
-  width:350px;
-  border-radius:8px;
-}
-
-.modal-box input, select{
-  width:100%;
-  margin:10px 0;
-  padding:12px;
-  font-size:15px;
-}
-
-.modal-box button{
-  width:100%;
-  padding:14px;
-  margin-top:10px;
-  background:#000;
-  color:#fff;
-  border:none;
-  cursor:pointer;
-  font-size:16px;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 .footer{
   background:#111;
   color:#aaa;
@@ -193,27 +126,17 @@ body{
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
-  margin-top:auto;
 }
 
-.footer h3{color:#fff;}
+.footer h3, .footer h4{
+  color:#fff;
+}
 
 .footer-bottom{
   text-align:center;
   padding:12px;
   background:#000;
   color:#aaa;
-}
-
-/* ================= WHATSAPP ================= */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-}
-
-.whatsapp img{
-  width:55px;
 }
 
 </style>
@@ -229,92 +152,72 @@ COVEA — Wealth. Strategy. Growth.
 <!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-<h1>Life Insurance Protection</h1>
+<h1>Life Insurance Growth Strategy</h1>
 </div>
 
-<!-- INTRO -->
+<!-- SECTION 1 -->
 <div class="section">
 <h2>Why Life Insurance Matters</h2>
 <p>
-Life insurance provides financial security to your loved ones in case of unforeseen events. It ensures that family members are protected and financial obligations are met without stress.
+Life insurance is a cornerstone of financial stability, providing protection for your family and dependents against unforeseen events. 
+It ensures long-term security and complements wealth-building strategies by safeguarding assets and obligations.
 </p>
 <p>
-This coverage is a key component of a comprehensive risk management and wealth preservation strategy.
+A well-structured life insurance plan enables both protection and growth of wealth simultaneously.
 </p>
 </div>
 
-<!-- PRODUCTS GRID -->
+<!-- SECTION 2 -->
 <div class="section">
 <h2>Our Life Insurance Solutions</h2>
 <div class="grid">
 <div class="card" onclick="openForm('Term Life Plan')">
 <h3>Term Life Insurance</h3>
-<p>High coverage at affordable premiums, ideal for long-term protection of your family.</p>
+<p>High coverage at affordable premiums, ideal for long-term family protection.</p>
 </div>
-
 <div class="card" onclick="openForm('Whole Life Plan')">
 <h3>Whole Life Insurance</h3>
-<p>Lifetime coverage with savings component for wealth accumulation and protection.</p>
+<p>Lifetime coverage with savings component for wealth accumulation.</p>
 </div>
-
 <div class="card" onclick="openForm('Endowment Plan')">
 <h3>Endowment Plan</h3>
-<p>Combines insurance protection with investment growth, suitable for goal-based savings.</p>
+<p>Insurance protection with investment growth for goal-based savings.</p>
 </div>
-
 <div class="card" onclick="openForm('ULIP Plan')">
 <h3>Unit Linked Insurance Plan (ULIP)</h3>
-<p>Flexible plan that combines market-linked investment and life cover for wealth growth.</p>
+<p>Flexible plan combining market-linked investment with life cover for growth.</p>
 </div>
 </div>
 </div>
 
-<!-- PROCESS -->
-<div class="process">
-<h2>How We Approach Life Protection</h2>
-<div class="process-grid">
-
-<div class="process-box">
-<h3>01. Assess Needs</h3>
-<p>Evaluate family obligations, liabilities, and future expenses</p>
+<!-- SECTION 3 -->
+<div class="section">
+<h2>Life Insurance Growth Philosophy</h2>
+<p>
+Our approach integrates protection with growth. Life insurance is not just coverage—it’s a strategic tool to grow wealth over time while maintaining security for your loved ones.
+</p>
+<p>
+By carefully selecting policies, monitoring market-linked options, and rebalancing your coverage, we ensure your life insurance plan evolves as your financial goals grow.
+</p>
 </div>
 
-<div class="process-box">
-<h3>02. Choose Plan</h3>
-<p>Select a policy aligned with risk profile and financial goals</p>
-</div>
-
-<div class="process-box">
-<h3>03. Implement</h3>
-<p>Execute policy issuance and premium payment setup</p>
-</div>
-
-<div class="process-box">
-<h3>04. Review</h3>
-<p>Periodically reassess coverage to match life stage changes</p>
-</div>
-
-</div>
-</div>
-
-<!-- FORM MODAL -->
-<div class="modal" id="formModal">
-<div class="modal-box">
-<h3>Get Your Life Insurance Plan</h3>
-<input id="name" placeholder="Full Name">
-<input id="dob" type="date">
-<input id="income" placeholder="Annual Income">
-<select id="type">
-<option>Salaried</option>
-<option>Business</option>
-</select>
-<input id="phone" placeholder="Phone Number">
-<button onclick="submitForm()">Submit</button>
-</div>
+<!-- SECTION 4 -->
+<div class="section">
+<h2>Implementation & Monitoring</h2>
+<p>
+Every life insurance plan is executed with detailed assessment of needs, periodic review, and adjustment based on life stage changes. 
+We combine risk protection with growth strategy for maximum financial impact.
+</p>
 </div>
 
 <!-- FOOTER -->
@@ -323,9 +226,8 @@ This coverage is a key component of a comprehensive risk management and wealth p
 <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
 <p>India</p>
 </div>
-
 <div>
-<h3>Contact</h3>
+<h4>Contact</h4>
 <p>+91 8800208059</p>
 <p>info.covea.india@gmail.com</p>
 </div>
@@ -335,26 +237,11 @@ This coverage is a key component of a comprehensive risk management and wealth p
 © 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
 
-<a href="https://wa.me/918800208059" class="whatsapp">
-<img src="https://img.icons8.com/color/96/whatsapp.png">
-</a>
-
 <script>
 let selectedPlan="";
 function openForm(plan){
   selectedPlan=plan;
-  document.getElementById("formModal").style.display="flex";
-}
-
-function submitForm(){
-  let name=document.getElementById("name").value;
-  let dob=document.getElementById("dob").value;
-  let income=document.getElementById("income").value;
-  let type=document.getElementById("type").value;
-  let phone=document.getElementById("phone").value;
-
-  let msg=`Life Plan:${selectedPlan}%0AName:${name}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
-  window.location.href=`https://wa.me/918800208059?text=${msg}`;
+  alert("Selected Plan: "+plan+" (Form integration can be added)");
 }
 </script>
 
