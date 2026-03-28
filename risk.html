@@ -8,9 +8,13 @@
 
 <style>
 
-/* RESET */
+/* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box;}
 
+/* GAP CONTROL */
+h1,h2,h3,p{margin:0;padding:0;}
+
+/* ================= BODY ================= */
 body{
 font-family:'Inter', Arial;
 background:#fff;
@@ -18,9 +22,10 @@ color:#111;
 display:flex;
 flex-direction:column;
 min-height:100vh;
+line-height:1.6;
 }
 
-/* TOPBAR */
+/* ================= TOPBAR ================= */
 .topbar{
 background:#000;
 color:#fff;
@@ -30,7 +35,7 @@ font-size:13px;
 letter-spacing:1px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -46,12 +51,12 @@ text-decoration:none;
 color:#000;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
 background:url('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2');
 background-size:cover;
 background-position:center;
-height:320px;
+height:300px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -64,22 +69,33 @@ padding:12px 25px;
 font-size:32px;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 .section{
-padding:70px 50px;
+padding:50px 60px;
 text-align:center;
 }
 
 .section h2{
-margin-bottom:40px;
+margin-bottom:20px;
 }
 
-/* GRID */
+/* ================= INTRO ================= */
+.intro{
+max-width:900px;
+margin:auto;
+margin-top:20px;
+color:#555;
+font-size:16px;
+line-height:1.8;
+}
+
+/* ================= GRID ================= */
 .grid{
 display:flex;
 flex-wrap:wrap;
-gap:30px;
+gap:25px;
 justify-content:center;
+margin-top:40px;
 }
 
 .card{
@@ -90,25 +106,46 @@ padding:25px;
 cursor:pointer;
 transition:0.3s;
 text-align:left;
+text-decoration:none;
+color:#000;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 12px 30px rgba(0,0,0,0.1);
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* PROCESS */
+/* ================= PHILOSOPHY ================= */
+.philosophy{
+padding:70px 60px;
+max-width:1000px;
+margin:auto;
+}
+
+.philosophy h2{
+margin-bottom:20px;
+font-size:28px;
+}
+
+.philosophy p{
+color:#444;
+margin-bottom:18px;
+line-height:1.8;
+}
+
+/* ================= PROCESS ================= */
 .process{
 background:#f7f7f7;
-padding:70px;
+padding:60px 50px;
 text-align:center;
 }
 
 .process-grid{
 display:flex;
-gap:30px;
+gap:25px;
 justify-content:center;
 flex-wrap:wrap;
+margin-top:30px;
 }
 
 .process-box{
@@ -116,9 +153,17 @@ background:#fff;
 padding:25px;
 width:250px;
 border:1px solid #eee;
+text-decoration:none;
+color:#000;
+transition:0.3s;
 }
 
-/* MODAL */
+.process-box:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= MODAL ================= */
 .modal{
 display:none;
 position:fixed;
@@ -151,7 +196,7 @@ border:none;
 cursor:pointer;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 .footer{
 background:#111;
 color:#aaa;
@@ -171,7 +216,7 @@ background:#000;
 color:#aaa;
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -186,70 +231,107 @@ width:55px;
 
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
 COVEA — Wealth. Strategy. Growth.
 </div>
 
+<!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
 </div>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Risk Protection Solutions</h1>
 </div>
 
+<!-- SECTION -->
 <div class="section">
 <h2>Protection Strategies</h2>
 
+<p class="intro">
+At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financial stability. 
+We design structured protection strategies to safeguard income, assets, family, and business against uncertainties.
+</p>
+
 <div class="grid">
 
-<div class="card" onclick="openForm('Life Protection Plan')">
+<a href="life.html" class="card">
 <h3>Life Insurance</h3>
-<p>Financial protection for your family and dependents.</p>
-</div>
+<p>Financial protection ensuring long-term security for dependents and family.</p>
+</a>
 
-<div class="card" onclick="openForm('Health Protection Plan')">
+<a href="health.html" class="card">
 <h3>Health Insurance</h3>
-<p>Comprehensive medical coverage and emergency protection.</p>
-</div>
+<p>Comprehensive medical coverage against healthcare emergencies.</p>
+</a>
 
-<div class="card" onclick="openForm('Income Protection Plan')">
+<a href="income-protection.html" class="card">
 <h3>Income Protection</h3>
-<p>Safeguard income against uncertainties and risks.</p>
-</div>
+<p>Safeguard earnings against unexpected disruptions and risks.</p>
+</a>
 
-<div class="card" onclick="openForm('Business Protection Plan')">
+<a href="business-protection.html" class="card">
 <h3>Business Protection</h3>
-<p>Secure business continuity and financial stability.</p>
-</div>
+<p>Ensure continuity and financial stability of business operations.</p>
+</a>
 
 </div>
 </div>
 
+<!-- PHILOSOPHY (GAP FIX) -->
+<div class="philosophy">
+
+<h2>Our Risk Management Philosophy</h2>
+
+<p>
+Risk protection is not an option — it is a necessity. At Covea, we believe that wealth creation must be supported by strong protection frameworks.
+</p>
+
+<p>
+We focus on identifying vulnerabilities across income, health, life, and business to create a comprehensive safety net.
+</p>
+
+<p>
+Our approach ensures that financial goals are not disrupted due to unforeseen circumstances or emergencies.
+</p>
+
+<p>
+We combine insurance planning with long-term financial strategy to create stability across all life stages.
+</p>
+
+<p>
+Continuous monitoring ensures that coverage evolves with changing financial responsibilities and life events.
+</p>
+
+</div>
+
+<!-- PROCESS -->
 <div class="process">
 <h2>Our Risk Advisory Approach</h2>
 
 <div class="process-grid">
 
-<div class="process-box">
+<a href="identify.html" class="process-box">
 <h3>01. Identify</h3>
 <p>Assess financial risks and liabilities</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="evaluate.html" class="process-box">
 <h3>02. Evaluate</h3>
 <p>Understand impact and coverage needs</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="protect.html" class="process-box">
 <h3>03. Protect</h3>
 <p>Implement suitable insurance strategies</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="review.html" class="process-box">
 <h3>04. Review</h3>
 <p>Update coverage as life evolves</p>
-</div>
+</a>
 
 </div>
 </div>
