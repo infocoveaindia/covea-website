@@ -14,10 +14,17 @@
   box-sizing:border-box;
 }
 
+html, body{
+  height:100%;
+}
+
 body{
   font-family:'Inter', Arial, sans-serif;
   background:#fff;
   color:#111;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
 
 /* TOPBAR */
@@ -40,6 +47,7 @@ body{
   border-bottom:1px solid #e5e5e5;
   position:sticky;
   top:0;
+  z-index:1000;
 }
 
 .logo{
@@ -56,10 +64,18 @@ body{
   font-weight:500;
 }
 
+/* CONTENT WRAPPER */
+.content{
+  flex:1; /* makes content expand to fill remaining space */
+  display:flex;
+  flex-direction:column;
+}
+
 /* HERO */
 .hero{
   padding:100px 50px 60px;
   max-width:900px;
+  margin:0 auto;
 }
 
 .hero h1{
@@ -77,6 +93,7 @@ body{
 .section{
   padding:60px 50px;
   max-width:1000px;
+  margin:0 auto;
 }
 
 .section h2{
@@ -134,58 +151,63 @@ COVEA — Wealth. Strategy. Growth.
 </div>
 </div>
 
-<!-- HERO -->
-<div class="hero">
-<h1>Dedicated Advisor</h1>
-<p>
-At Covea Wealth Solutions Pvt. Ltd., each client is assigned a dedicated advisor to provide personalized guidance and support throughout their financial journey. This ensures expert attention, proactive planning, and timely assistance.
-</p>
-</div>
+<!-- CONTENT -->
+<div class="content">
 
-<!-- SECTION 1 -->
-<div class="section">
-<h2>Personalized Guidance</h2>
-<p>
-Our advisors understand your unique financial situation, risk appetite, and long-term goals. Every recommendation is customized to suit your individual needs.
-</p>
-</div>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Dedicated Advisor</h1>
+    <p>
+      At Covea Wealth Solutions Pvt. Ltd., each client is assigned a dedicated advisor to provide personalized guidance and support throughout their financial journey. This ensures expert attention, proactive planning, and timely assistance.
+    </p>
+  </div>
 
-<!-- SECTION 2 -->
-<div class="section">
-<h2>Proactive Support</h2>
-<p>
-We don’t wait for problems to arise. Your dedicated advisor monitors your portfolio and keeps you informed about opportunities, risks, and market changes.
-</p>
-</div>
+  <!-- SECTION 1 -->
+  <div class="section">
+    <h2>Personalized Guidance</h2>
+    <p>
+      Our advisors understand your unique financial situation, risk appetite, and long-term goals. Every recommendation is customized to suit your individual needs.
+    </p>
+  </div>
 
-<!-- SECTION 3 -->
-<div class="section">
-<h2>Expert Planning</h2>
-<p>
-With years of experience and domain expertise, our advisors provide strategic insights to help you make informed decisions and optimize wealth growth.
-</p>
-</div>
+  <!-- SECTION 2 -->
+  <div class="section">
+    <h2>Proactive Support</h2>
+    <p>
+      We don’t wait for problems to arise. Your dedicated advisor monitors your portfolio and keeps you informed about opportunities, risks, and market changes.
+    </p>
+  </div>
 
-<!-- SECTION 4 -->
-<div class="section">
-<h2>Continuous Relationship</h2>
-<p>
-Your advisor remains your financial partner over the long term, ensuring continuity, trust, and evolving strategies as your life and needs change.
-</p>
-</div>
+  <!-- SECTION 3 -->
+  <div class="section">
+    <h2>Expert Planning</h2>
+    <p>
+      With years of experience and domain expertise, our advisors provide strategic insights to help you make informed decisions and optimize wealth growth.
+    </p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <h2>Continuous Relationship</h2>
+    <p>
+      Your advisor remains your financial partner over the long term, ensuring continuity, trust, and evolving strategies as your life and needs change.
+    </p>
+  </div>
+
+</div> <!-- END CONTENT -->
 
 <!-- FOOTER -->
 <div class="footer">
-<div>
-<h3>Covea Wealth Solutions Pvt. Ltd.</h3>
-<p>India</p>
-</div>
+  <div>
+    <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
+    <p>India</p>
+  </div>
 
-<div>
-<h4>Contact</h4>
-<p>+91 8800208059</p>
-<p>info.covea.india@gmail.com</p>
-</div>
+  <div>
+    <h4>Contact</h4>
+    <p>+91 8800208059</p>
+    <p>info.covea.india@gmail.com</p>
+  </div>
 </div>
 
 <div class="footer-bottom">
