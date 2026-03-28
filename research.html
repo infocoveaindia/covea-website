@@ -20,10 +20,26 @@ body{
   color:#111;
 }
 
-/* HEADER */
-.header{
-  padding:20px 50px;
-  border-bottom:1px solid #eee;
+/* TOPBAR */
+.topbar{
+  background:#000;
+  color:#fff;
+  padding:6px;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 50px;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  position:sticky;
+  top:0;
 }
 
 .logo{
@@ -33,20 +49,28 @@ body{
   color:#000;
 }
 
+.nav-links a{
+  margin:0 18px;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+}
+
 /* HERO */
 .hero{
-  padding:80px 50px;
+  padding:100px 50px 60px;
   max-width:900px;
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:48px;
   margin-bottom:20px;
 }
 
 .hero p{
   color:#555;
-  line-height:1.6;
+  line-height:1.7;
+  font-size:16px;
 }
 
 /* SECTION */
@@ -56,37 +80,36 @@ body{
 }
 
 .section h2{
+  font-size:28px;
   margin-bottom:20px;
-  font-size:26px;
 }
 
 .section p{
-  margin-bottom:15px;
+  margin-bottom:18px;
   color:#444;
-  line-height:1.7;
-}
-
-/* BLOCK */
-.block{
-  margin-bottom:40px;
-  padding:25px;
-  border:1px solid #eee;
-}
-
-.block h3{
-  margin-bottom:10px;
+  line-height:1.8;
+  font-size:15px;
 }
 
 /* FOOTER */
 .footer{
-  margin-top:60px;
-  padding:40px 50px;
   background:#111;
   color:#aaa;
+  padding:50px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
 }
 
-.footer h3{
+.footer h3, .footer h4{
   color:#fff;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:12px;
+  background:#000;
+  color:#aaa;
 }
 
 </style>
@@ -94,70 +117,124 @@ body{
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<!-- TOPBAR -->
+<div class="topbar">
+COVEA — Wealth. Strategy. Growth.
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
 <h1>Research Driven Investment Strategy</h1>
 <p>
-At Covea, every investment decision is backed by deep research, data analysis, and macroeconomic understanding. We do not rely on speculation — we rely on facts, trends, and structured analysis to generate consistent results.
+At Covea Wealth Solutions Pvt. Ltd., our investment decisions are powered by deep research, data-driven insights, and structured analysis. We focus on understanding economic trends, market behavior, and financial data to build high-conviction investment strategies.
 </p>
 </div>
 
-<!-- CONTENT -->
+<!-- SECTION 1 -->
 <div class="section">
-
-<div class="block">
-<h3>Macroeconomic Analysis</h3>
+<h2>Macroeconomic Analysis</h2>
 <p>
-We closely track GDP growth, inflation, interest rates, and government policies. These macro factors help us identify the direction of the economy and position portfolios accordingly.
+We closely monitor macroeconomic indicators such as GDP growth, inflation rates, interest rates, and government policies. These factors play a critical role in determining the direction of financial markets and influence our asset allocation decisions.
+</p>
+<p>
+Understanding the broader economic environment allows us to position portfolios strategically for both growth and protection.
 </p>
 </div>
 
-<div class="block">
-<h3>Sectoral Research</h3>
+<!-- SECTION 2 -->
+<div class="section">
+<h2>Sectoral Research</h2>
 <p>
-Different sectors perform differently in each economic cycle. We identify high-growth sectors such as banking, technology, infrastructure, and energy based on market conditions and allocate capital strategically.
+Different sectors perform differently across economic cycles. We analyze sectors such as banking, technology, infrastructure, energy, and manufacturing to identify emerging opportunities.
+</p>
+<p>
+Capital is allocated based on sector performance trends, growth potential, and alignment with macroeconomic conditions.
 </p>
 </div>
 
-<div class="block">
-<h3>Fundamental Analysis</h3>
+<!-- SECTION 3 -->
+<div class="section">
+<h2>Fundamental Analysis</h2>
 <p>
-We analyze company financials including revenue growth, profit margins, debt levels, and management quality before making any equity investment decisions.
+We evaluate companies based on financial performance, including revenue growth, profit margins, debt levels, and return ratios. Management quality and long-term business sustainability are key factors in our analysis.
+</p>
+<p>
+This ensures that investments are made in fundamentally strong and reliable businesses.
 </p>
 </div>
 
-<div class="block">
-<h3>Technical Analysis</h3>
+<!-- SECTION 4 -->
+<div class="section">
+<h2>Technical Analysis</h2>
 <p>
-Market timing and entry points are optimized using technical indicators, price trends, and volume analysis to enhance returns and reduce risk.
+Technical analysis is used to optimize entry and exit points in the market. We study price movements, trends, and trading volumes to identify favorable investment timings.
+</p>
+<p>
+This helps in enhancing returns while managing short-term risks effectively.
 </p>
 </div>
 
-<div class="block">
-<h3>Data & Risk Modeling</h3>
+<!-- SECTION 5 -->
+<div class="section">
+<h2>Data & Risk Modeling</h2>
 <p>
-We use data-driven models to measure risk, volatility, and expected returns. This ensures that every portfolio is optimized based on risk tolerance and financial goals.
+We use quantitative models and historical data to assess risk, volatility, and expected returns. This enables us to design portfolios that align with specific risk profiles and financial objectives.
+</p>
+<p>
+Data-driven decision-making reduces uncertainty and improves consistency in performance.
 </p>
 </div>
 
-<div class="block">
-<h3>Continuous Monitoring</h3>
+<!-- SECTION 6 -->
+<div class="section">
+<h2>Continuous Monitoring</h2>
 <p>
-Markets change constantly. We continuously monitor portfolios and rebalance them based on new data, market shifts, and global developments.
+Financial markets are dynamic and constantly evolving. We continuously track portfolio performance and market developments to ensure alignment with investment objectives.
+</p>
+<p>
+Regular reviews and adjustments allow us to respond effectively to changing market conditions.
 </p>
 </div>
 
+<!-- SECTION 7 -->
+<div class="section">
+<h2>Long-Term Research Philosophy</h2>
+<p>
+Our research philosophy is focused on long-term value creation rather than short-term speculation. We believe in disciplined investing backed by strong data and consistent analysis.
+</p>
+<p>
+This approach helps clients achieve stable and sustainable wealth growth over time.
+</p>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
+<div>
 <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
-<p>Research. Data. Precision Investing.</p>
+<p>India</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>+91 8800208059</p>
+<p>info.covea.india@gmail.com</p>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
 
 </body>
