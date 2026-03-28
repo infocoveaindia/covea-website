@@ -34,7 +34,7 @@ body{
 /* ================= NAVBAR ================= */
 .navbar{
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start; /* Left aligned logo */
   padding:18px 50px;
   border-bottom:1px solid #eee;
   background:#fff;
@@ -45,13 +45,6 @@ body{
   font-size:20px;
   text-decoration:none;
   color:#000;
-}
-
-.nav-links a{
-  margin-left:20px;
-  text-decoration:none;
-  color:#444;
-  font-weight:500;
 }
 
 /* ================= HERO ================= */
@@ -242,13 +235,6 @@ COVEA — Wealth. Strategy. Growth.
 <!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
-<div class="nav-links">
-  <a href="risk.html">Risk Protection</a>
-  <a href="income-protection.html">Income Protection</a>
-  <a href="business-protection.html">Business Protection</a>
-  <a href="life-insurance.html">Life Insurance</a>
-  <a href="health-insurance.html">Health Insurance</a>
-</div>
 </div>
 
 <!-- HERO -->
@@ -260,26 +246,27 @@ COVEA — Wealth. Strategy. Growth.
 <div class="section">
 <h2>Protection Strategies</h2>
 <p class="intro">
-At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financial stability. We design structured protection strategies to safeguard income, assets, family, and business against uncertainties.
+At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financial stability.  
+We design structured protection strategies to safeguard income, assets, family, and business against uncertainties.
 </p>
 
 <div class="grid">
-<a href="life-insurance.html" class="card">
+<a href="#" class="card" onclick="openForm('Life Insurance')">
 <h3>Life Insurance</h3>
 <p>Financial protection ensuring long-term security for dependents and family.</p>
 </a>
 
-<a href="health-insurance.html" class="card">
+<a href="#" class="card" onclick="openForm('Health Insurance')">
 <h3>Health Insurance</h3>
 <p>Comprehensive medical coverage against healthcare emergencies.</p>
 </a>
 
-<a href="income-protection.html" class="card">
+<a href="#" class="card" onclick="openForm('Income Protection')">
 <h3>Income Protection</h3>
 <p>Safeguard earnings against unexpected disruptions and risks.</p>
 </a>
 
-<a href="business-protection.html" class="card">
+<a href="#" class="card" onclick="openForm('Business Protection')">
 <h3>Business Protection</h3>
 <p>Ensure continuity and financial stability of business operations.</p>
 </a>
@@ -289,36 +276,36 @@ At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financ
 <!-- PHILOSOPHY -->
 <div class="philosophy">
 <h2>Our Risk Management Philosophy</h2>
-<p>Risk protection is not an option — it is a necessity. At Covea, we believe that wealth creation must be supported by strong protection frameworks.</p>
-<p>We focus on identifying vulnerabilities across income, health, life, and business to create a comprehensive safety net.</p>
-<p>Our approach ensures that financial goals are not disrupted due to unforeseen circumstances or emergencies.</p>
-<p>We combine insurance planning with long-term financial strategy to create stability across all life stages.</p>
-<p>Continuous monitoring ensures that coverage evolves with changing financial responsibilities and life events.</p>
+<p>Risk protection is not optional — it is essential. At Covea, wealth creation is supported by strong protection frameworks.</p>
+<p>We identify vulnerabilities across income, health, life, and business to build a comprehensive safety net.</p>
+<p>Our institutional approach ensures that financial goals are not disrupted by unforeseen circumstances or emergencies.</p>
+<p>We combine insurance planning with long-term financial strategies for stability across all life stages.</p>
+<p>Continuous monitoring ensures coverage evolves with changing financial responsibilities and life events.</p>
 </div>
 
 <!-- PROCESS -->
 <div class="process">
 <h2>Our Risk Advisory Approach</h2>
 <div class="process-grid">
-<a href="identify.html" class="process-box">
+<div class="process-box">
 <h3>01. Identify</h3>
 <p>Assess financial risks and liabilities</p>
-</a>
+</div>
 
-<a href="evaluate.html" class="process-box">
+<div class="process-box">
 <h3>02. Evaluate</h3>
 <p>Understand impact and coverage needs</p>
-</a>
+</div>
 
-<a href="protect.html" class="process-box">
+<div class="process-box">
 <h3>03. Protect</h3>
 <p>Implement suitable insurance strategies</p>
-</a>
+</div>
 
-<a href="review.html" class="process-box">
+<div class="process-box">
 <h3>04. Review</h3>
 <p>Update coverage as life evolves</p>
-</a>
+</div>
 </div>
 </div>
 
