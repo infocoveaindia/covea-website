@@ -9,7 +9,11 @@
 <style>
 
 /* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Inter', Arial;
@@ -64,14 +68,14 @@ padding:12px 25px;
 font-size:32px;
 }
 
-/* SECTION */
+/* SECTION (FIXED GAP) */
 .section{
-padding:70px 50px;
+padding:50px 50px;
 text-align:center;
 }
 
 .section h2{
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 /* GRID */
@@ -90,6 +94,8 @@ padding:25px;
 cursor:pointer;
 transition:0.3s;
 text-align:left;
+text-decoration:none;
+color:#000;
 }
 
 .card:hover{
@@ -100,7 +106,7 @@ box-shadow:0 12px 30px rgba(0,0,0,0.1);
 /* PROCESS */
 .process{
 background:#f7f7f7;
-padding:70px;
+padding:50px;
 text-align:center;
 }
 
@@ -116,6 +122,14 @@ background:#fff;
 padding:25px;
 width:250px;
 border:1px solid #eee;
+text-decoration:none;
+color:#000;
+transition:0.3s;
+}
+
+.process-box:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* MODAL */
@@ -203,25 +217,25 @@ COVEA — Wealth. Strategy. Growth.
 
 <div class="grid">
 
-<div class="card" onclick="openForm('Growth Portfolio')">
+<a href="growth.html" class="card">
 <h3>Growth Portfolio</h3>
 <p>Long-term equity focused strategies for capital appreciation.</p>
-</div>
+</a>
 
-<div class="card" onclick="openForm('Balanced Portfolio')">
+<a href="balance.html" class="card">
 <h3>Balanced Portfolio</h3>
 <p>Equity + debt allocation for stable growth and risk control.</p>
-</div>
+</a>
 
-<div class="card" onclick="openForm('Income Portfolio')">
+<a href="income.html" class="card">
 <h3>Income Portfolio</h3>
 <p>Regular income generation with low-risk instruments.</p>
-</div>
+</a>
 
-<div class="card" onclick="openForm('High Net Worth Portfolio')">
+<a href="hni.html" class="card">
 <h3>HNI Portfolio</h3>
 <p>Customized strategies for high-value investors.</p>
-</div>
+</a>
 
 </div>
 </div>
@@ -231,25 +245,25 @@ COVEA — Wealth. Strategy. Growth.
 
 <div class="process-grid">
 
-<div class="process-box">
+<a href="analyze.html" class="process-box">
 <h3>01. Analyze</h3>
 <p>Understand goals & risk profile</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="plan.html" class="process-box">
 <h3>02. Allocate</h3>
 <p>Asset allocation strategy</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="execute.html" class="process-box">
 <h3>03. Execute</h3>
 <p>Disciplined investments</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="review.html" class="process-box">
 <h3>04. Monitor</h3>
 <p>Continuous optimization</p>
-</div>
+</a>
 
 </div>
 </div>
