@@ -6,6 +6,7 @@
 <title>Risk Protection - COVEA</title>
 
 <style>
+
 /* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box;}
 h1,h2,h3,p{margin:0;padding:0;}
@@ -34,7 +35,7 @@ body{
 /* ================= NAVBAR ================= */
 .navbar{
   display:flex;
-  justify-content:flex-start; /* Left aligned logo */
+  justify-content:flex-start;
   padding:18px 50px;
   border-bottom:1px solid #eee;
   background:#fff;
@@ -222,6 +223,7 @@ button{
 .whatsapp img{
   width:55px;
 }
+
 </style>
 </head>
 
@@ -245,82 +247,100 @@ COVEA — Wealth. Strategy. Growth.
 <!-- SECTION -->
 <div class="section">
 <h2>Protection Strategies</h2>
+
 <p class="intro">
-At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financial stability.  
+At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financial stability. 
 We design structured protection strategies to safeguard income, assets, family, and business against uncertainties.
 </p>
 
 <div class="grid">
-<a href="#" class="card" onclick="openForm('Life Insurance')">
+
+<a href="life-insurance.html" class="card">
 <h3>Life Insurance</h3>
 <p>Financial protection ensuring long-term security for dependents and family.</p>
 </a>
 
-<a href="#" class="card" onclick="openForm('Health Insurance')">
+<a href="health-insurance.html" class="card">
 <h3>Health Insurance</h3>
 <p>Comprehensive medical coverage against healthcare emergencies.</p>
 </a>
 
-<a href="#" class="card" onclick="openForm('Income Protection')">
+<a href="income-protection.html" class="card">
 <h3>Income Protection</h3>
 <p>Safeguard earnings against unexpected disruptions and risks.</p>
 </a>
 
-<a href="#" class="card" onclick="openForm('Business Protection')">
+<a href="business-protection.html" class="card">
 <h3>Business Protection</h3>
 <p>Ensure continuity and financial stability of business operations.</p>
 </a>
+
 </div>
 </div>
 
 <!-- PHILOSOPHY -->
 <div class="philosophy">
 <h2>Our Risk Management Philosophy</h2>
-<p>Risk protection is not optional — it is essential. At Covea, wealth creation is supported by strong protection frameworks.</p>
-<p>We identify vulnerabilities across income, health, life, and business to build a comprehensive safety net.</p>
-<p>Our institutional approach ensures that financial goals are not disrupted by unforeseen circumstances or emergencies.</p>
-<p>We combine insurance planning with long-term financial strategies for stability across all life stages.</p>
-<p>Continuous monitoring ensures coverage evolves with changing financial responsibilities and life events.</p>
+
+<p>Risk protection is not an option — it is a necessity. At Covea, we believe that wealth creation must be supported by strong protection frameworks.</p>
+
+<p>We focus on identifying vulnerabilities across income, health, life, and business to create a comprehensive safety net.</p>
+
+<p>Our approach ensures that financial goals are not disrupted due to unforeseen circumstances or emergencies.</p>
+
+<p>We combine insurance planning with long-term financial strategy to create stability across all life stages.</p>
+
+<p>Continuous monitoring ensures that coverage evolves with changing financial responsibilities and life events.</p>
+
 </div>
 
 <!-- PROCESS -->
 <div class="process">
 <h2>Our Risk Advisory Approach</h2>
+
 <div class="process-grid">
-<div class="process-box">
+
+<a href="identify.html" class="process-box">
 <h3>01. Identify</h3>
 <p>Assess financial risks and liabilities</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="evaluate.html" class="process-box">
 <h3>02. Evaluate</h3>
 <p>Understand impact and coverage needs</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="protect.html" class="process-box">
 <h3>03. Protect</h3>
 <p>Implement suitable insurance strategies</p>
-</div>
+</a>
 
-<div class="process-box">
+<a href="review.html" class="process-box">
 <h3>04. Review</h3>
 <p>Update coverage as life evolves</p>
-</div>
+</a>
+
 </div>
 </div>
 
 <!-- FORM -->
 <div class="modal" id="formModal">
 <div class="modal-box">
+
 <h3>Get Protection Plan</h3>
+
 <input id="dob" type="date">
 <input id="income" placeholder="Annual Income">
+
 <select id="type">
 <option>Salaried</option>
 <option>Business</option>
 </select>
+
 <input id="phone" placeholder="Phone Number">
+
 <button onclick="submitForm()">Submit</button>
+
 </div>
 </div>
 
@@ -347,18 +367,15 @@ We design structured protection strategies to safeguard income, assets, family, 
 </a>
 
 <script>
-let selectedPlan="";
-function openForm(plan){
-  selectedPlan=plan;
-  document.getElementById("formModal").style.display="flex";
-}
 function submitForm(){
-  let dob=document.getElementById("dob").value;
-  let income=document.getElementById("income").value;
-  let type=document.getElementById("type").value;
-  let phone=document.getElementById("phone").value;
-  let msg=`Protection:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
-  window.location.href=`https://wa.me/918800208059?text=${msg}`;
+let dob=document.getElementById("dob").value;
+let income=document.getElementById("income").value;
+let type=document.getElementById("type").value;
+let phone=document.getElementById("phone").value;
+
+let msg=`Protection:%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
+
+window.location.href=`https://wa.me/918800208059?text=${msg}`;
 }
 </script>
 
