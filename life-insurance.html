@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Life Insurance Growth | Covea</title>
+<title>Life Insurance | Covea Growth Strategy</title>
 
 <style>
-
 /* RESET */
 *{
   margin:0;
@@ -58,21 +57,24 @@ body{
 
 /* HERO */
 .hero{
+  padding:100px 50px 60px;
+  max-width:900px;
+  text-align:center;
   background:url('https://images.unsplash.com/photo-1601597112563-24d5c4cd539f?crop=entropy&cs=tinysrgb&fit=max&w=1200&h=400&q=80');
   background-size:cover;
   background-position:center;
-  height:320px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   color:#fff;
-  text-align:center;
 }
 
 .hero h1{
-  background:rgba(0,0,0,0.6);
-  padding:12px 25px;
-  font-size:36px;
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  color:#fff;
+  line-height:1.7;
+  font-size:16px;
 }
 
 /* SECTION */
@@ -138,10 +140,8 @@ body{
   background:#000;
   color:#aaa;
 }
-
 </style>
 </head>
-
 <body>
 
 <!-- TOPBAR -->
@@ -163,39 +163,35 @@ COVEA — Wealth. Strategy. Growth.
 <!-- HERO -->
 <div class="hero">
 <h1>Life Insurance Growth Strategy</h1>
+<p>Secure your family’s future while growing your wealth over time. Our life insurance plans are designed for both protection and strategic financial growth.</p>
 </div>
 
 <!-- SECTION 1 -->
 <div class="section">
 <h2>Why Life Insurance Matters</h2>
-<p>
-Life insurance is a cornerstone of financial stability, providing protection for your family and dependents against unforeseen events. 
-It ensures long-term security and complements wealth-building strategies by safeguarding assets and obligations.
-</p>
-<p>
-A well-structured life insurance plan enables both protection and growth of wealth simultaneously.
-</p>
+<p>Life insurance ensures that your loved ones are protected against unforeseen events. It is a critical part of long-term financial planning and wealth preservation.</p>
+<p>Choosing the right life insurance plan enables both protection and growth of your financial assets.</p>
 </div>
 
 <!-- SECTION 2 -->
 <div class="section">
 <h2>Our Life Insurance Solutions</h2>
 <div class="grid">
-<div class="card" onclick="openForm('Term Life Plan')">
+<div class="card" onclick="location.href='term-life.html'">
 <h3>Term Life Insurance</h3>
-<p>High coverage at affordable premiums, ideal for long-term family protection.</p>
+<p>High coverage at affordable premiums, ideal for long-term protection of your family.</p>
 </div>
-<div class="card" onclick="openForm('Whole Life Plan')">
+<div class="card" onclick="location.href='whole-life.html'">
 <h3>Whole Life Insurance</h3>
-<p>Lifetime coverage with savings component for wealth accumulation.</p>
+<p>Lifetime coverage with a savings component for wealth accumulation.</p>
 </div>
-<div class="card" onclick="openForm('Endowment Plan')">
+<div class="card" onclick="location.href='endowment.html'">
 <h3>Endowment Plan</h3>
-<p>Insurance protection with investment growth for goal-based savings.</p>
+<p>Combines insurance protection with investment growth for goal-based savings.</p>
 </div>
-<div class="card" onclick="openForm('ULIP Plan')">
+<div class="card" onclick="location.href='ulip.html'">
 <h3>Unit Linked Insurance Plan (ULIP)</h3>
-<p>Flexible plan combining market-linked investment with life cover for growth.</p>
+<p>Flexible plan combining market-linked investment and life cover for wealth growth.</p>
 </div>
 </div>
 </div>
@@ -203,21 +199,14 @@ A well-structured life insurance plan enables both protection and growth of weal
 <!-- SECTION 3 -->
 <div class="section">
 <h2>Life Insurance Growth Philosophy</h2>
-<p>
-Our approach integrates protection with growth. Life insurance is not just coverage—it’s a strategic tool to grow wealth over time while maintaining security for your loved ones.
-</p>
-<p>
-By carefully selecting policies, monitoring market-linked options, and rebalancing your coverage, we ensure your life insurance plan evolves as your financial goals grow.
-</p>
+<p>We integrate protection with growth. Life insurance is not just coverage—it’s a strategic tool to grow wealth over time while maintaining security for your loved ones.</p>
+<p>By selecting appropriate policies, monitoring market-linked options, and rebalancing coverage, your life insurance plan evolves as your financial goals grow.</p>
 </div>
 
 <!-- SECTION 4 -->
 <div class="section">
 <h2>Implementation & Monitoring</h2>
-<p>
-Every life insurance plan is executed with detailed assessment of needs, periodic review, and adjustment based on life stage changes. 
-We combine risk protection with growth strategy for maximum financial impact.
-</p>
+<p>Every life insurance plan is executed with detailed assessment of needs, periodic review, and adjustments based on life stage changes. We combine risk protection with growth strategy for maximum financial impact.</p>
 </div>
 
 <!-- FOOTER -->
@@ -236,14 +225,6 @@ We combine risk protection with growth strategy for maximum financial impact.
 <div class="footer-bottom">
 © 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
-
-<script>
-let selectedPlan="";
-function openForm(plan){
-  selectedPlan=plan;
-  alert("Selected Plan: "+plan+" (Form integration can be added)");
-}
-</script>
 
 </body>
 </html>
