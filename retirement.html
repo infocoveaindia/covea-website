@@ -3,182 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Retirement Planning - COVEA</title>
 
 <style>
 
-/* RESET */
+/* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box;}
+h1,h2,h3,p{margin:0;padding:0;}
 
+/* ================= BODY ================= */
 body{
-font-family:'Inter', Arial, sans-serif;
-background:#fff;
-color:#111;
-display:flex;
-flex-direction:column;
-min-height:100vh;
+  font-family:'Inter', Arial, sans-serif;
+  background:#fff;
+  color:#111;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  line-height:1.6;
 }
 
-/* TOPBAR */
+/* ================= TOPBAR ================= */
 .topbar{
-background:#000;
-color:#fff;
-text-align:center;
-padding:6px;
-font-size:13px;
-letter-spacing:1px;
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:6px;
+  font-size:13px;
+  letter-spacing:1px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-border-bottom:1px solid #eee;
-background:#fff;
+  display:flex;
+  justify-content:flex-start;
+  padding:18px 50px;
+  border-bottom:1px solid #eee;
+  background:#fff;
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
-text-decoration:none;
-color:#000;
+  font-weight:700;
+  font-size:20px;
+  text-decoration:none;
+  color:#000;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-background:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
-background-size:cover;
-background-position:center;
-height:320px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
+  background:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+  background-size:cover;
+  background-position:center;
+  height:320px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
 }
 
 .hero h1{
-background:rgba(0,0,0,0.6);
-padding:12px 25px;
-font-size:34px;
+  background:rgba(0,0,0,0.6);
+  padding:12px 25px;
+  font-size:32px;
+  text-align:center;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 .section{
-padding:80px 60px;
-text-align:center;
+  padding:50px 60px;
+  text-align:center;
 }
 
 .section h2{
-margin-bottom:40px;
-font-size:30px;
+  margin-bottom:20px;
+  font-size:28px;
 }
 
-/* GRID */
+.intro{
+  max-width:900px;
+  margin:auto;
+  margin-top:20px;
+  color:#555;
+  font-size:16px;
+  line-height:1.8;
+}
+
+/* ================= GRID ================= */
 .grid{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+  margin-top:40px;
 }
 
 .card{
-width:280px;
-border:1px solid #eee;
-padding:25px;
-text-align:left;
-transition:0.3s;
-cursor:pointer;
+  background:#fff;
+  width:280px;
+  border:1px solid #eee;
+  padding:25px;
+  cursor:pointer;
+  transition:0.3s;
+  text-align:left;
+  text-decoration:none;
+  color:#000;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 12px 30px rgba(0,0,0,0.1);
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* PROCESS */
+/* ================= PROCESS ================= */
 .process{
-background:#f7f7f7;
-padding:80px 60px;
-text-align:center;
+  background:#f7f7f7;
+  padding:60px 50px;
+  text-align:center;
 }
 
 .process-grid{
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:30px;
 }
 
 .process-box{
-width:250px;
-background:#fff;
-padding:25px;
-border:1px solid #eee;
+  background:#fff;
+  padding:25px;
+  width:250px;
+  border:1px solid #eee;
+  text-decoration:none;
+  color:#000;
+  transition:0.3s;
 }
 
-/* MODAL */
-.modal{
-display:none;
-position:fixed;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;
-align-items:center;
+.process-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.modal-box{
-background:#fff;
-padding:25px;
-width:320px;
-}
-
-.modal-box input, select{
-width:100%;
-margin:8px 0;
-padding:10px;
-}
-
-button{
-width:100%;
-padding:12px;
-background:#000;
-color:#fff;
-border:none;
-cursor:pointer;
-}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 .footer{
-background:#111;
-color:#aaa;
-padding:60px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-margin-top:auto;
+  background:#111;
+  color:#aaa;
+  padding:50px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  margin-top:auto;
 }
 
 .footer h3{color:#fff;}
 
 .footer-bottom{
-text-align:center;
-padding:12px;
-background:#000;
-color:#aaa;
+  text-align:center;
+  padding:12px;
+  background:#000;
+  color:#aaa;
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
+  position:fixed;
+  bottom:20px;
+  right:20px;
 }
 .whatsapp img{
-width:55px;
+  width:55px;
 }
 
 </style>
@@ -186,46 +178,56 @@ width:55px;
 
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
 COVEA — Wealth. Strategy. Growth.
 </div>
 
+<!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
 </div>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Retirement Planning</h1>
 </div>
 
+<!-- SECTION -->
 <div class="section">
 <h2>Retirement Solutions</h2>
 
+<p class="intro">
+At Covea Wealth Solutions Pvt. Ltd., we focus on building a secure and stable retirement plan. 
+Explore the options below to design a retirement strategy tailored for your needs.
+</p>
+
 <div class="grid">
 
-<div class="card" onclick="openForm('Retirement Corpus Planning')">
+<a href="corpus-planning.html" class="card">
 <h3>Corpus Planning</h3>
 <p>Build sufficient retirement corpus aligned with future needs.</p>
-</div>
+</a>
 
-<div class="card" onclick="openForm('Passive Income Strategy')">
+<a href="passive-income.html" class="card">
 <h3>Passive Income</h3>
 <p>Create steady income streams post retirement.</p>
-</div>
+</a>
 
-<div class="card" onclick="openForm('Inflation Planning')">
+<a href="inflation-planning.html" class="card">
 <h3>Inflation Protection</h3>
 <p>Ensure your money retains value over time.</p>
-</div>
+</a>
 
-<div class="card" onclick="openForm('Pension Strategy')">
+<a href="pension-planning.html" class="card">
 <h3>Pension Planning</h3>
 <p>Structured pension strategies for financial security.</p>
-</div>
+</a>
 
 </div>
 </div>
 
+<!-- PROCESS -->
 <div class="process">
 <h2>Our Retirement Approach</h2>
 
@@ -233,7 +235,7 @@ COVEA — Wealth. Strategy. Growth.
 
 <div class="process-box">
 <h3>01. Goal Setting</h3>
-<p>Define retirement lifestyle & expenses</p>
+<p>Define retirement lifestyle & expected expenses</p>
 </div>
 
 <div class="process-box">
@@ -243,34 +245,13 @@ COVEA — Wealth. Strategy. Growth.
 
 <div class="process-box">
 <h3>03. Investment</h3>
-<p>Allocate funds strategically</p>
+<p>Allocate funds strategically for growth & security</p>
 </div>
 
 <div class="process-box">
 <h3>04. Income</h3>
-<p>Generate stable retirement income</p>
+<p>Generate stable income post retirement</p>
 </div>
-
-</div>
-</div>
-
-<!-- FORM -->
-<div class="modal" id="formModal">
-<div class="modal-box">
-
-<h3>Plan Your Retirement</h3>
-
-<input id="dob" type="date">
-<input id="income" placeholder="Annual Income">
-
-<select id="type">
-<option>Salaried</option>
-<option>Business</option>
-</select>
-
-<input id="phone" placeholder="Phone Number">
-
-<button onclick="submitForm()">Submit</button>
 
 </div>
 </div>
@@ -296,29 +277,6 @@ COVEA — Wealth. Strategy. Growth.
 <a href="https://wa.me/918800208059" class="whatsapp">
 <img src="https://img.icons8.com/color/96/whatsapp.png">
 </a>
-
-<script>
-
-let selectedPlan="";
-
-function openForm(plan){
-selectedPlan=plan;
-document.getElementById("formModal").style.display="flex";
-}
-
-function submitForm(){
-
-let dob=document.getElementById("dob").value;
-let income=document.getElementById("income").value;
-let type=document.getElementById("type").value;
-let phone=document.getElementById("phone").value;
-
-let msg=`Retirement:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
-
-window.location.href=`https://wa.me/918800208059?text=${msg}`;
-}
-
-</script>
 
 </body>
 </html>
