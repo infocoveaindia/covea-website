@@ -58,7 +58,7 @@ body{
 
 /* HERO */
 .hero{
-  padding:100px 50px;
+  padding:100px 50px 60px;
   max-width:900px;
 }
 
@@ -75,43 +75,20 @@ body{
 
 /* SECTION */
 .section{
-  padding:70px 50px;
+  padding:60px 50px;
+  max-width:1000px;
 }
 
 .section h2{
-  font-size:30px;
-  margin-bottom:30px;
+  font-size:28px;
+  margin-bottom:20px;
 }
 
-/* GRID */
-.grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:30px;
-}
-
-.card{
-  flex:1 1 300px;
-  border:1px solid #eee;
-  padding:30px;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* DARK STRIP */
-.strip{
-  background:#000;
-  color:#fff;
-  padding:60px 50px;
-  text-align:center;
-}
-
-.strip h2{
-  font-size:32px;
+.section p{
+  margin-bottom:18px;
+  color:#444;
+  line-height:1.8;
+  font-size:15px;
 }
 
 /* FOOTER */
@@ -121,17 +98,18 @@ body{
   padding:50px;
   display:flex;
   justify-content:space-between;
+  flex-wrap:wrap;
 }
 
-.footer h3{
+.footer h3, .footer h4{
   color:#fff;
 }
 
 .footer-bottom{
-  background:#000;
-  color:#aaa;
   text-align:center;
   padding:12px;
+  background:#000;
+  color:#aaa;
 }
 
 </style>
@@ -139,12 +117,15 @@ body{
 
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
-COVEA — Institutional Investing Framework
+COVEA — Wealth. Strategy. Growth.
 </div>
 
+<!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
+
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -153,96 +134,92 @@ COVEA — Institutional Investing Framework
 </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Institutional Investment Approach</h1>
 <p>
-Covea Wealth Solutions operates with a structured institutional framework inspired by global asset management firms like BlackRock. Our approach is rooted in disciplined allocation, deep research, and long-term wealth creation.
+At Covea Wealth Solutions Pvt. Ltd., our investment philosophy is built on institutional-grade principles followed by global asset management firms. We focus on structured portfolio construction, disciplined asset allocation, and long-term wealth creation rather than short-term speculation.
 </p>
 </div>
 
+<!-- SECTION 1 -->
 <div class="section">
-<h2>Core Asset Classes</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Equity Markets</h3>
+<h2>Equity Investments</h2>
 <p>
-Exposure to large-cap, mid-cap, and emerging sectors. Focus on long-term capital appreciation through fundamentally strong businesses.
+Equity forms the growth engine of our portfolios. We allocate capital into fundamentally strong companies across large-cap, mid-cap, and emerging sectors. Our approach focuses on long-term capital appreciation by identifying businesses with sustainable growth potential, strong management, and competitive advantages.
+</p>
+<p>
+We avoid short-term trading noise and instead focus on long-term value creation through disciplined holding strategies aligned with economic growth cycles.
 </p>
 </div>
 
-<div class="card">
-<h3>Debt Instruments</h3>
-<p>
-Corporate bonds, fixed income securities, and debt funds used for stability and consistent returns.
-</p>
-</div>
-
-<div class="card">
-<h3>Government Securities</h3>
-<p>
-Low-risk sovereign bonds ensuring capital safety and predictable income streams.
-</p>
-</div>
-
-<div class="card">
-<h3>Index Investing</h3>
-<p>
-Tracking benchmarks like Nifty 50 to capture market-wide returns with cost efficiency.
-</p>
-</div>
-
-</div>
-</div>
-
-<div class="strip">
-<h2>Diversification. Discipline. Long-Term Growth.</h2>
-</div>
-
+<!-- SECTION 2 -->
 <div class="section">
-<h2>Strategic Allocation</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Asset Allocation</h3>
+<h2>Debt & Fixed Income</h2>
 <p>
-Balancing equity, debt, and alternative assets based on market cycles and economic outlook.
+Debt instruments provide stability and consistent income generation within the portfolio. We invest in corporate bonds, fixed deposits, and debt mutual funds to balance risk and ensure predictable returns.
+</p>
+<p>
+These instruments play a critical role in reducing volatility and maintaining liquidity, especially during uncertain market conditions.
 </p>
 </div>
 
-<div class="card">
-<h3>Risk Management</h3>
-<p>
-Portfolio diversification and hedging strategies to reduce volatility and downside risk.
-</p>
-</div>
-
-<div class="card">
-<h3>Global Exposure</h3>
-<p>
-Selective exposure to global markets and forex for diversification beyond domestic markets.
-</p>
-</div>
-
-<div class="card">
-<h3>Rebalancing</h3>
-<p>
-Continuous portfolio adjustments based on performance and macroeconomic shifts.
-</p>
-</div>
-
-</div>
-</div>
-
+<!-- SECTION 3 -->
 <div class="section">
-<h2>Investment Philosophy</h2>
-<p style="max-width:800px; color:#555;">
-Our philosophy is built on long-term thinking, disciplined execution, and data-backed decision making. We avoid speculative behavior and focus on sustainable wealth creation.
+<h2>Government Bonds</h2>
+<p>
+Government securities are considered one of the safest investment options. We allocate a portion of the portfolio to sovereign-backed bonds to ensure capital protection and steady income generation.
+</p>
+<p>
+These assets act as a hedge during equity market downturns and contribute to overall portfolio stability.
 </p>
 </div>
 
+<!-- SECTION 4 -->
+<div class="section">
+<h2>Index Funds & Passive Investing</h2>
+<p>
+Passive investing through index funds allows us to capture broad market performance efficiently. By tracking indices such as Nifty 50, we ensure consistent returns aligned with overall economic growth.
+</p>
+<p>
+This approach minimizes costs while providing diversified exposure to the market.
+</p>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+<h2>Diversification Strategy</h2>
+<p>
+Diversification is a core pillar of our investment strategy. We spread investments across multiple asset classes, sectors, and instruments to reduce risk and optimize returns.
+</p>
+<p>
+This ensures that the portfolio remains resilient under different market conditions.
+</p>
+</div>
+
+<!-- SECTION 6 -->
+<div class="section">
+<h2>Forex & Global Exposure</h2>
+<p>
+Global diversification is essential in modern portfolio management. We analyze currency movements and global economic trends to provide selective exposure to international markets.
+</p>
+<p>
+This helps in hedging domestic risks and capturing opportunities beyond local markets.
+</p>
+</div>
+
+<!-- SECTION 7 -->
+<div class="section">
+<h2>Risk Management & Rebalancing</h2>
+<p>
+Risk management is integrated into every stage of our investment process. We continuously monitor portfolio performance and adjust allocations based on market movements and economic changes.
+</p>
+<p>
+Regular rebalancing ensures alignment with long-term financial goals and maintains the desired risk-return balance.
+</p>
+</div>
+
+<!-- FOOTER -->
 <div class="footer">
 <div>
 <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
@@ -250,7 +227,7 @@ Our philosophy is built on long-term thinking, disciplined execution, and data-b
 </div>
 
 <div>
-<h3>Contact</h3>
+<h4>Contact</h4>
 <p>+91 8800208059</p>
 <p>info.covea.india@gmail.com</p>
 </div>
