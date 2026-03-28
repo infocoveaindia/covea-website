@@ -20,10 +20,26 @@ body{
   color:#111;
 }
 
-/* HEADER */
-.header{
-  padding:20px 50px;
-  border-bottom:1px solid #eee;
+/* TOPBAR */
+.topbar{
+  background:#000;
+  color:#fff;
+  padding:6px;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 50px;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  position:sticky;
+  top:0;
 }
 
 .logo{
@@ -33,20 +49,28 @@ body{
   color:#000;
 }
 
+.nav-links a{
+  margin:0 18px;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+}
+
 /* HERO */
 .hero{
-  padding:80px 50px;
+  padding:100px 50px 60px;
   max-width:900px;
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:48px;
   margin-bottom:20px;
 }
 
 .hero p{
   color:#555;
-  line-height:1.6;
+  line-height:1.7;
+  font-size:16px;
 }
 
 /* SECTION */
@@ -56,37 +80,36 @@ body{
 }
 
 .section h2{
+  font-size:28px;
   margin-bottom:20px;
-  font-size:26px;
 }
 
 .section p{
-  margin-bottom:15px;
+  margin-bottom:18px;
   color:#444;
-  line-height:1.7;
-}
-
-/* BLOCK */
-.block{
-  margin-bottom:40px;
-  padding:25px;
-  border:1px solid #eee;
-}
-
-.block h3{
-  margin-bottom:10px;
+  line-height:1.8;
+  font-size:15px;
 }
 
 /* FOOTER */
 .footer{
-  margin-top:60px;
-  padding:40px 50px;
   background:#111;
   color:#aaa;
+  padding:50px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
 }
 
-.footer h3{
+.footer h3, .footer h4{
   color:#fff;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:12px;
+  background:#000;
+  color:#aaa;
 }
 
 </style>
@@ -94,70 +117,124 @@ body{
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<!-- TOPBAR -->
+<div class="topbar">
+COVEA — Wealth. Strategy. Growth.
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
 <h1>Client-Centric Wealth Management</h1>
 <p>
-At Covea Wealth Solutions, every strategy begins with the client. Unlike traditional firms that offer standardized products, we build customized financial strategies tailored to individual goals, risk appetite, and life stages.
+At Covea Wealth Solutions Pvt. Ltd., our philosophy is simple — every investment strategy begins with the client. We do not offer one-size-fits-all solutions. Instead, we design personalized financial strategies tailored to each client’s unique goals, risk profile, and financial journey.
 </p>
 </div>
 
-<!-- CONTENT -->
+<!-- SECTION 1 -->
 <div class="section">
-
-<div class="block">
-<h3>Personalized Financial Planning</h3>
+<h2>Personalized Financial Planning</h2>
 <p>
-We design customized investment plans based on your income, financial goals, and future aspirations. Whether it's wealth creation, retirement planning, or capital protection — everything is structured around you.
+Every client has different financial aspirations and responsibilities. We begin by understanding income, expenses, future goals, and financial priorities. Based on this, we design a structured investment plan aligned with long-term wealth creation.
+</p>
+<p>
+Our approach ensures that each portfolio reflects the client’s personal financial vision rather than generic market trends.
 </p>
 </div>
 
-<div class="block">
-<h3>Goal-Based Investing</h3>
+<!-- SECTION 2 -->
+<div class="section">
+<h2>Goal-Based Investing</h2>
 <p>
-Each investment is aligned with a specific goal such as buying a house, funding education, or building long-term wealth. This ensures clarity, discipline, and measurable progress.
+We align investments with specific financial goals such as buying a home, funding education, retirement planning, or wealth creation. Each investment decision is linked to a defined objective.
+</p>
+<p>
+This structured approach brings clarity, discipline, and measurable progress to the investment journey.
 </p>
 </div>
 
-<div class="block">
-<h3>Risk Profiling</h3>
+<!-- SECTION 3 -->
+<div class="section">
+<h2>Risk Profiling</h2>
 <p>
-Every investor has a different risk tolerance. We assess your comfort level with market fluctuations and build a portfolio that balances risk and return effectively.
+Understanding risk tolerance is essential in portfolio construction. We assess each client’s ability and willingness to take risks based on financial situation, age, and investment horizon.
+</p>
+<p>
+Portfolios are then designed to balance risk and return, ensuring comfort during market fluctuations.
 </p>
 </div>
 
-<div class="block">
-<h3>Dedicated Advisory Support</h3>
+<!-- SECTION 4 -->
+<div class="section">
+<h2>Dedicated Advisory Support</h2>
 <p>
-Our clients receive continuous support, regular updates, and expert guidance. We ensure transparency and long-term relationship building.
+Clients receive continuous support, expert guidance, and regular updates. We maintain transparency in communication and ensure that clients are always informed about their investments.
+</p>
+<p>
+Our focus is on building long-term relationships based on trust and consistent performance.
 </p>
 </div>
 
-<div class="block">
-<h3>Portfolio Review & Rebalancing</h3>
+<!-- SECTION 5 -->
+<div class="section">
+<h2>Portfolio Review & Rebalancing</h2>
 <p>
-We regularly review your portfolio performance and rebalance it based on market conditions and changes in your financial goals.
+Markets evolve, and so do financial goals. We regularly review portfolio performance and make necessary adjustments to maintain alignment with objectives.
+</p>
+<p>
+Rebalancing ensures that the portfolio stays optimized for both risk and return.
 </p>
 </div>
 
-<div class="block">
-<h3>Long-Term Wealth Vision</h3>
+<!-- SECTION 6 -->
+<div class="section">
+<h2>Long-Term Wealth Vision</h2>
 <p>
-Our focus is not short-term gains but sustainable long-term wealth creation. We help clients stay disciplined and invested through market cycles.
+We emphasize long-term investing over short-term speculation. Our strategies are designed to help clients stay disciplined and focused through different market cycles.
+</p>
+<p>
+This ensures sustainable wealth creation and financial security over time.
 </p>
 </div>
 
+<!-- SECTION 7 -->
+<div class="section">
+<h2>Trust & Transparency</h2>
+<p>
+Trust is the foundation of our client relationships. We maintain complete transparency in our investment process, fees, and performance reporting.
+</p>
+<p>
+Our goal is to empower clients with clarity, confidence, and control over their financial future.
+</p>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
+<div>
 <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
-<p>Client First. Always.</p>
+<p>India</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>+91 8800208059</p>
+<p>info.covea.india@gmail.com</p>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
 
 </body>
