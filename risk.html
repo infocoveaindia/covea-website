@@ -6,225 +6,229 @@
 <title>Risk Protection - COVEA</title>
 
 <style>
-
 /* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box;}
-
-/* GAP CONTROL */
 h1,h2,h3,p{margin:0;padding:0;}
 
 /* ================= BODY ================= */
 body{
-font-family:'Inter', Arial;
-background:#fff;
-color:#111;
-display:flex;
-flex-direction:column;
-min-height:100vh;
-line-height:1.6;
+  font-family:'Inter', Arial, sans-serif;
+  background:#fff;
+  color:#111;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  line-height:1.6;
 }
 
 /* ================= TOPBAR ================= */
 .topbar{
-background:#000;
-color:#fff;
-text-align:center;
-padding:6px;
-font-size:13px;
-letter-spacing:1px;
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:6px;
+  font-size:13px;
+  letter-spacing:1px;
 }
 
 /* ================= NAVBAR ================= */
 .navbar{
-display:flex;
-justify-content:space-between;
-padding:18px 50px;
-border-bottom:1px solid #eee;
-background:#fff;
+  display:flex;
+  justify-content:space-between;
+  padding:18px 50px;
+  border-bottom:1px solid #eee;
+  background:#fff;
 }
 
 .logo{
-font-weight:700;
-font-size:20px;
-text-decoration:none;
-color:#000;
+  font-weight:700;
+  font-size:20px;
+  text-decoration:none;
+  color:#000;
+}
+
+.nav-links a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
 }
 
 /* ================= HERO ================= */
 .hero{
-background:url('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2');
-background-size:cover;
-background-position:center;
-height:300px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
+  background:url('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2');
+  background-size:cover;
+  background-position:center;
+  height:320px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
 }
 
 .hero h1{
-background:rgba(0,0,0,0.6);
-padding:12px 25px;
-font-size:32px;
+  background:rgba(0,0,0,0.6);
+  padding:12px 25px;
+  font-size:32px;
+  text-align:center;
 }
 
 /* ================= SECTION ================= */
 .section{
-padding:50px 60px;
-text-align:center;
+  padding:50px 60px;
+  text-align:center;
 }
 
 .section h2{
-margin-bottom:20px;
+  margin-bottom:20px;
+  font-size:28px;
 }
 
-/* ================= INTRO ================= */
 .intro{
-max-width:900px;
-margin:auto;
-margin-top:20px;
-color:#555;
-font-size:16px;
-line-height:1.8;
+  max-width:900px;
+  margin:auto;
+  margin-top:20px;
+  color:#555;
+  font-size:16px;
+  line-height:1.8;
 }
 
 /* ================= GRID ================= */
 .grid{
-display:flex;
-flex-wrap:wrap;
-gap:25px;
-justify-content:center;
-margin-top:40px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+  margin-top:40px;
 }
 
 .card{
-background:#fff;
-width:280px;
-border:1px solid #eee;
-padding:25px;
-cursor:pointer;
-transition:0.3s;
-text-align:left;
-text-decoration:none;
-color:#000;
+  background:#fff;
+  width:280px;
+  border:1px solid #eee;
+  padding:25px;
+  cursor:pointer;
+  transition:0.3s;
+  text-align:left;
+  text-decoration:none;
+  color:#000;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* ================= PHILOSOPHY ================= */
 .philosophy{
-padding:70px 60px;
-max-width:1000px;
-margin:auto;
+  padding:70px 60px;
+  max-width:1000px;
+  margin:auto;
 }
 
 .philosophy h2{
-margin-bottom:20px;
-font-size:28px;
+  margin-bottom:20px;
+  font-size:28px;
 }
 
 .philosophy p{
-color:#444;
-margin-bottom:18px;
-line-height:1.8;
+  color:#444;
+  margin-bottom:18px;
+  line-height:1.8;
 }
 
 /* ================= PROCESS ================= */
 .process{
-background:#f7f7f7;
-padding:60px 50px;
-text-align:center;
+  background:#f7f7f7;
+  padding:60px 50px;
+  text-align:center;
 }
 
 .process-grid{
-display:flex;
-gap:25px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:30px;
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:30px;
 }
 
 .process-box{
-background:#fff;
-padding:25px;
-width:250px;
-border:1px solid #eee;
-text-decoration:none;
-color:#000;
-transition:0.3s;
+  background:#fff;
+  padding:25px;
+  width:250px;
+  border:1px solid #eee;
+  text-decoration:none;
+  color:#000;
+  transition:0.3s;
 }
 
 .process-box:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* ================= MODAL ================= */
 .modal{
-display:none;
-position:fixed;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;
-align-items:center;
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
 }
 
 .modal-box{
-background:#fff;
-padding:25px;
-width:320px;
-border-radius:6px;
+  background:#fff;
+  padding:25px;
+  width:320px;
+  border-radius:6px;
 }
 
 .modal-box input, select{
-width:100%;
-margin:8px 0;
-padding:10px;
+  width:100%;
+  margin:8px 0;
+  padding:10px;
 }
 
 button{
-width:100%;
-padding:12px;
-background:#000;
-color:#fff;
-border:none;
-cursor:pointer;
+  width:100%;
+  padding:12px;
+  background:#000;
+  color:#fff;
+  border:none;
+  cursor:pointer;
 }
 
 /* ================= FOOTER ================= */
 .footer{
-background:#111;
-color:#aaa;
-padding:50px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-margin-top:auto;
+  background:#111;
+  color:#aaa;
+  padding:50px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  margin-top:auto;
 }
 
 .footer h3{color:#fff;}
 
 .footer-bottom{
-text-align:center;
-padding:12px;
-background:#000;
-color:#aaa;
+  text-align:center;
+  padding:12px;
+  background:#000;
+  color:#aaa;
 }
 
 /* ================= WHATSAPP ================= */
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
+  position:fixed;
+  bottom:20px;
+  right:20px;
 }
 .whatsapp img{
-width:55px;
+  width:55px;
 }
-
 </style>
 </head>
 
@@ -238,6 +242,13 @@ COVEA — Wealth. Strategy. Growth.
 <!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html" class="logo">COVEA</a>
+<div class="nav-links">
+  <a href="risk.html">Risk Protection</a>
+  <a href="income-protection.html">Income Protection</a>
+  <a href="business-protection.html">Business Protection</a>
+  <a href="life-insurance.html">Life Insurance</a>
+  <a href="health-insurance.html">Health Insurance</a>
+</div>
 </div>
 
 <!-- HERO -->
@@ -248,20 +259,17 @@ COVEA — Wealth. Strategy. Growth.
 <!-- SECTION -->
 <div class="section">
 <h2>Protection Strategies</h2>
-
 <p class="intro">
-At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financial stability. 
-We design structured protection strategies to safeguard income, assets, family, and business against uncertainties.
+At Covea Wealth Solutions Pvt. Ltd., risk protection is the foundation of financial stability. We design structured protection strategies to safeguard income, assets, family, and business against uncertainties.
 </p>
 
 <div class="grid">
-
-<a href="life.html" class="card">
+<a href="life-insurance.html" class="card">
 <h3>Life Insurance</h3>
 <p>Financial protection ensuring long-term security for dependents and family.</p>
 </a>
 
-<a href="health.html" class="card">
+<a href="health-insurance.html" class="card">
 <h3>Health Insurance</h3>
 <p>Comprehensive medical coverage against healthcare emergencies.</p>
 </a>
@@ -275,43 +283,23 @@ We design structured protection strategies to safeguard income, assets, family, 
 <h3>Business Protection</h3>
 <p>Ensure continuity and financial stability of business operations.</p>
 </a>
-
 </div>
 </div>
 
 <!-- PHILOSOPHY -->
 <div class="philosophy">
-
 <h2>Our Risk Management Philosophy</h2>
-
-<p>
-Risk protection is not an option — it is a necessity. At Covea, we believe that wealth creation must be supported by strong protection frameworks.
-</p>
-
-<p>
-We focus on identifying vulnerabilities across income, health, life, and business to create a comprehensive safety net.
-</p>
-
-<p>
-Our approach ensures that financial goals are not disrupted due to unforeseen circumstances or emergencies.
-</p>
-
-<p>
-We combine insurance planning with long-term financial strategy to create stability across all life stages.
-</p>
-
-<p>
-Continuous monitoring ensures that coverage evolves with changing financial responsibilities and life events.
-</p>
-
+<p>Risk protection is not an option — it is a necessity. At Covea, we believe that wealth creation must be supported by strong protection frameworks.</p>
+<p>We focus on identifying vulnerabilities across income, health, life, and business to create a comprehensive safety net.</p>
+<p>Our approach ensures that financial goals are not disrupted due to unforeseen circumstances or emergencies.</p>
+<p>We combine insurance planning with long-term financial strategy to create stability across all life stages.</p>
+<p>Continuous monitoring ensures that coverage evolves with changing financial responsibilities and life events.</p>
 </div>
 
 <!-- PROCESS -->
 <div class="process">
 <h2>Our Risk Advisory Approach</h2>
-
 <div class="process-grid">
-
 <a href="identify.html" class="process-box">
 <h3>01. Identify</h3>
 <p>Assess financial risks and liabilities</p>
@@ -331,28 +319,21 @@ Continuous monitoring ensures that coverage evolves with changing financial resp
 <h3>04. Review</h3>
 <p>Update coverage as life evolves</p>
 </a>
-
 </div>
 </div>
 
 <!-- FORM -->
 <div class="modal" id="formModal">
 <div class="modal-box">
-
 <h3>Get Protection Plan</h3>
-
 <input id="dob" type="date">
 <input id="income" placeholder="Annual Income">
-
 <select id="type">
 <option>Salaried</option>
 <option>Business</option>
 </select>
-
 <input id="phone" placeholder="Phone Number">
-
 <button onclick="submitForm()">Submit</button>
-
 </div>
 </div>
 
@@ -379,25 +360,19 @@ Continuous monitoring ensures that coverage evolves with changing financial resp
 </a>
 
 <script>
-
 let selectedPlan="";
-
 function openForm(plan){
-selectedPlan=plan;
-document.getElementById("formModal").style.display="flex";
+  selectedPlan=plan;
+  document.getElementById("formModal").style.display="flex";
 }
-
 function submitForm(){
-let dob=document.getElementById("dob").value;
-let income=document.getElementById("income").value;
-let type=document.getElementById("type").value;
-let phone=document.getElementById("phone").value;
-
-let msg=`Protection:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
-
-window.location.href=`https://wa.me/918800208059?text=${msg}`;
+  let dob=document.getElementById("dob").value;
+  let income=document.getElementById("income").value;
+  let type=document.getElementById("type").value;
+  let phone=document.getElementById("phone").value;
+  let msg=`Protection:${selectedPlan}%0ADOB:${dob}%0AIncome:${income}%0AType:${type}%0APhone:${phone}`;
+  window.location.href=`https://wa.me/918800208059?text=${msg}`;
 }
-
 </script>
 
 </body>
