@@ -7,7 +7,7 @@
 
 <style>
 
-/* RESET */
+/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
@@ -18,6 +18,7 @@ html, body{
   height:100%;
 }
 
+/* ================= BODY ================= */
 body{
   font-family:'Inter', Arial, sans-serif;
   background:#fff;
@@ -25,9 +26,10 @@ body{
   display:flex;
   flex-direction:column;
   min-height:100vh;
+  line-height:1.6;
 }
 
-/* TOPBAR */
+/* ================= TOPBAR ================= */
 .topbar{
   background:#000;
   color:#fff;
@@ -37,7 +39,7 @@ body{
   letter-spacing:1px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
   display:flex;
   justify-content:space-between;
@@ -62,53 +64,96 @@ body{
   text-decoration:none;
   color:#444;
   font-weight:500;
+  transition:0.3s;
 }
 
-/* CONTENT WRAPPER */
+.nav-links a:hover{
+  color:#000;
+  font-weight:600;
+}
+
+/* ================= CONTENT WRAPPER ================= */
 .content{
-  flex:1; /* makes content expand to fill remaining space */
+  flex:1;
   display:flex;
   flex-direction:column;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-  padding:100px 50px 60px;
+  padding:120px 50px 80px;
   max-width:900px;
   margin:0 auto;
+  text-align:center;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:52px;
   margin-bottom:20px;
+  line-height:1.2;
 }
 
 .hero p{
   color:#555;
-  line-height:1.7;
-  font-size:16px;
+  line-height:1.8;
+  font-size:18px;
+  max-width:800px;
+  margin:auto;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 .section{
-  padding:60px 50px;
+  padding:70px 50px;
   max-width:1000px;
   margin:0 auto;
 }
 
 .section h2{
-  font-size:28px;
-  margin-bottom:20px;
+  font-size:32px;
+  margin-bottom:25px;
+  color:#222;
 }
 
 .section p{
-  margin-bottom:18px;
+  margin-bottom:22px;
   color:#444;
   line-height:1.8;
-  font-size:15px;
+  font-size:16px;
 }
 
-/* FOOTER */
+/* ADDITIONAL CARD-LIKE STYLE FOR SECTIONS */
+.section-box{
+  background:#f9f9f9;
+  border:1px solid #eee;
+  padding:25px 30px;
+  margin-bottom:35px;
+  transition:0.3s;
+}
+
+.section-box:hover{
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transform:translateY(-5px);
+}
+
+/* ================= SUB-HEADINGS ================= */
+.section h3{
+  font-size:22px;
+  margin-bottom:12px;
+  color:#111;
+}
+
+/* ================= LIST STYLE ================= */
+.section ul{
+  margin-left:20px;
+  margin-bottom:20px;
+}
+
+.section ul li{
+  margin-bottom:10px;
+  line-height:1.7;
+}
+
+/* ================= FOOTER ================= */
 .footer{
   background:#111;
   color:#aaa;
@@ -127,6 +172,17 @@ body{
   padding:12px;
   background:#000;
   color:#aaa;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+}
+
+.whatsapp img{
+  width:55px;
 }
 
 </style>
@@ -163,35 +219,99 @@ COVEA — Wealth. Strategy. Growth.
   </div>
 
   <!-- SECTION 1 -->
-  <div class="section">
+  <div class="section section-box">
     <h2>Personalized Guidance</h2>
     <p>
       Our advisors understand your unique financial situation, risk appetite, and long-term goals. Every recommendation is customized to suit your individual needs.
     </p>
+    <p>
+      We analyze your existing portfolio, understand your family commitments, and help prioritize investments for maximum growth and security.
+    </p>
+    <ul>
+      <li>Customized investment strategies</li>
+      <li>Risk-adjusted recommendations</li>
+      <li>Tailored retirement planning</li>
+    </ul>
   </div>
 
   <!-- SECTION 2 -->
-  <div class="section">
+  <div class="section section-box">
     <h2>Proactive Support</h2>
     <p>
       We don’t wait for problems to arise. Your dedicated advisor monitors your portfolio and keeps you informed about opportunities, risks, and market changes.
     </p>
+    <p>
+      Alerts and timely consultations ensure you are never caught off-guard, and adjustments are made before risks impact your wealth.
+    </p>
+    <ul>
+      <li>Quarterly portfolio review</li>
+      <li>Market trend insights</li>
+      <li>Early risk identification</li>
+    </ul>
   </div>
 
   <!-- SECTION 3 -->
-  <div class="section">
+  <div class="section section-box">
     <h2>Expert Planning</h2>
     <p>
       With years of experience and domain expertise, our advisors provide strategic insights to help you make informed decisions and optimize wealth growth.
     </p>
+    <p>
+      This includes detailed tax planning, diversification across asset classes, and guidance on retirement corpus allocation.
+    </p>
+    <ul>
+      <li>Tax optimization strategies</li>
+      <li>Asset allocation guidance</li>
+      <li>Long-term investment roadmap</li>
+    </ul>
   </div>
 
   <!-- SECTION 4 -->
-  <div class="section">
+  <div class="section section-box">
     <h2>Continuous Relationship</h2>
     <p>
       Your advisor remains your financial partner over the long term, ensuring continuity, trust, and evolving strategies as your life and needs change.
     </p>
+    <p>
+      Regular reviews, reassessments, and check-ins help maintain alignment with your goals. We adapt to lifestyle changes, market conditions, and personal milestones.
+    </p>
+    <ul>
+      <li>Annual strategy recalibration</li>
+      <li>Family wealth planning</li>
+      <li>Estate and legacy planning</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section section-box">
+    <h2>How Our Advisors Work</h2>
+    <p>
+      Each advisor is trained to follow a structured methodology that ensures client satisfaction and consistent results.
+    </p>
+    <p>
+      They collaborate with internal research teams, tax consultants, and legal experts to deliver a holistic financial solution.
+    </p>
+    <ul>
+      <li>Comprehensive client assessment</li>
+      <li>Integrated advisory solutions</li>
+      <li>Transparent reporting & feedback</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section section-box">
+    <h2>Client Education</h2>
+    <p>
+      We empower clients with knowledge. Each advisor explains the reasoning behind recommendations, investment choices, and risk factors.
+    </p>
+    <p>
+      This builds trust and ensures that clients make informed decisions aligned with their financial objectives.
+    </p>
+    <ul>
+      <li>Workshops & webinars</li>
+      <li>Portfolio simulation tools</li>
+      <li>FAQs & guidance documents</li>
+    </ul>
   </div>
 
 </div> <!-- END CONTENT -->
@@ -213,6 +333,10 @@ COVEA — Wealth. Strategy. Growth.
 <div class="footer-bottom">
 © 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
+
+<a href="https://wa.me/918800208059" class="whatsapp">
+  <img src="https://img.icons8.com/color/96/whatsapp.png">
+</a>
 
 </body>
 </html>
