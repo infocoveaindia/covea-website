@@ -6,6 +6,12 @@
 
 <title>Investment Planning - COVEA</title>
 
+<!-- SEO -->
+<meta name="description" content="Covea Wealth Solutions provides structured investment planning including SIP, Lump Sum, Goal-Based and Tax Saving strategies.">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 /* ================= RESET ================= */
@@ -15,15 +21,9 @@ padding:0;
 box-sizing:border-box;
 }
 
-/* GAP CONTROL */
-h1,h2,h3,p{
-margin:0;
-padding:0;
-}
-
 /* ================= BODY ================= */
 body{
-font-family:'Inter', Arial;
+font-family:'Inter', Arial, sans-serif;
 background:#fff;
 color:#111;
 display:flex;
@@ -60,9 +60,7 @@ color:#000;
 
 /* ================= HERO ================= */
 .hero{
-background:url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e');
-background-size:cover;
-background-position:center;
+background:url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e') center/cover no-repeat;
 height:300px;
 display:flex;
 align-items:center;
@@ -196,8 +194,28 @@ position:fixed;
 bottom:20px;
 right:20px;
 }
+
 .whatsapp img{
 width:55px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+.navbar{
+padding:15px 20px;
+}
+
+.section{
+padding:40px 20px;
+}
+
+.philosophy{
+padding:50px 20px;
+}
+
+.process{
+padding:40px 20px;
+}
 }
 
 </style>
@@ -237,7 +255,7 @@ We create structured investment solutions tailored to financial goals, risk tole
 <p>Strategic deployment of capital based on valuation and timing.</p>
 </a>
 
-<!-- ✅ FIXED GOAL LINK -->
+<!-- GOAL FIX -->
 <a href="#" onclick="openGoal()" class="card">
 <h3>Goal-Based Planning</h3>
 <p>Structured investments aligned with specific life goals and timelines.</p>
@@ -308,13 +326,13 @@ We create structured investment solutions tailored to financial goals, risk tole
 © 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
 
-<a href="https://wa.me/918800208059" class="whatsapp">
-<img src="https://img.icons8.com/color/96/whatsapp.png">
+<a href="https://wa.me/918800208059" class="whatsapp" target="_blank">
+<img src="https://img.icons8.com/color/96/whatsapp.png" alt="WhatsApp">
 </a>
 
 <script>
 
-/* ✅ SMART GOAL REDIRECT FIX */
+/* SMART GOAL REDIRECT */
 function openGoal(){
 fetch('goal.html')
 .then(res=>{
