@@ -321,7 +321,7 @@ textarea{height:120px;}
 
 </div>
 
-<form action="https://formspree.io/f/xjgjkegd" method="POST" class="form">
+<form id="contact-form" class="form">
 <h3>Request a Call Back</h3>
 
 <input type="text" name="name" placeholder="Full Name" required>
@@ -330,6 +330,8 @@ textarea{height:120px;}
 <textarea name="message" placeholder="Message"></textarea>
 
 <button type="submit" class="submit-btn">Submit Request</button>
+
+<p id="form-status"></p>
 </form>
 
 </div>
@@ -403,6 +405,32 @@ function sendEmail(){
 function openInsta(){
   window.location.href="comingsoon.html";
 }
+</script>
+
+<script>
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const response = await fetch("https://formspree.io/f/xjgjkegd", {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if (response.ok) {
+    status.innerHTML = "✅ Submitted Successfully!";
+    form.reset();
+  } else {
+    status.innerHTML = "❌ Something went wrong!";
+  }
+});
 </script>
 
 </body>
