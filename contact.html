@@ -321,15 +321,16 @@ textarea{height:120px;}
 
 </div>
 
-<div class="form">
+<form action="https://formspree.io/f/xjgjkegd" method="POST" class="form">
 <h3>Request a Call Back</h3>
-<input type="text" placeholder="Full Name">
-<input type="email" placeholder="Email">
-<input type="tel" placeholder="Phone">
-<textarea placeholder="Message"></textarea>
 
-<button class="submit-btn">Submit Request</button>
-</div>
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="tel" name="phone" placeholder="Phone">
+<textarea name="message" placeholder="Message"></textarea>
+
+<button type="submit" class="submit-btn">Submit Request</button>
+</form>
 
 </div>
 
