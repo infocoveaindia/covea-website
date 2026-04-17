@@ -220,33 +220,83 @@ body {
 
 </div>
 
-
 <!-- FOOTER -->
+<style>
+.footer {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+/* TEXT + LINKS WHITE */
+.footer h3, 
+.footer h4, 
+.footer p, 
+.footer a {
+  color: #fff;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* STICK FOOTER BOTTOM */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+</style>
+
 <div class="footer">
 
-<div>
-<h3>Covea Wealth Solutions Pvt. Ltd.</h3>
-<p>India</p>
-</div>
+  <div>
+    <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
+    <p>India</p>
+  </div>
 
-<div>
-<h4>Services</h4>
-<p><a href="investment.html">Investment Planning</a></p>
-<p><a href="wealth.html">Wealth Management</a></p>
-<p><a href="risk.html">Risk Advisory</a></p>
-</div>
+  <div>
+    <h4>Services</h4>
+    <p><a href="investment.html">Investment Planning</a></p>
+    <p><a href="wealth.html">Wealth Management</a></p>
+    <p><a href="risk.html">Risk Advisory</a></p>
+  </div>
 
-<div>
-<h4>Contact</h4>
-<p>+91 8766289206</p>
-<p>info@coveawealthsolutions.com</p>
-</div>
+  <div>
+    <h4>Contact</h4>
+    <p>+91 8766289206</p>
+    <p>info@coveawealthsolutions.com</p>
+  </div>
 
 </div>
 
 <div class="footer-bottom">
-© 2026 Covea Wealth Solutions Pvt. Ltd.
+  © 2026 Covea Wealth Solutions Pvt. Ltd.
 </div>
-
-</body>
-</html>
