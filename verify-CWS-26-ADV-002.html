@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Verification - Covea Wealth Solutions</title>
+
+<style>
+
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #ffffff;
+  color: #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+/* ================= MAIN ================= */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+/* ================= CARD ================= */
+.card {
+  width: 320px;
+  background: #0b0b0b;
+  border-radius: 20px;
+  padding: 30px 20px;
+  position: relative;
+  border: 1px solid rgba(201,167,78,0.4);
+  box-shadow: 
+    0 0 25px rgba(0,0,0,0.6),
+    0 0 15px rgba(201,167,78,0.2);
+  text-align: center;
+}
+
+/* GOLD LINE TOP */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  right: 25px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c9a74e, transparent);
+}
+
+/* COMPANY NAME */
+.company {
+  font-size: 14px;
+  color: #c9a74e;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* PHOTO */
+.photo {
+  width: 120px;
+  height: 120px;
+  margin: 10px auto 20px;
+  border: 2px solid #c9a74e;
+  border-radius: 8px;
+  background: url('shruti.jpg') center/cover no-repeat;
+}
+
+/* NAME */
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ROLE */
+.role {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* INFO BLOCK */
+.info-block {
+  margin-top: 10px;
+}
+
+/* LABEL */
+.label {
+  font-size: 11px;
+  color: #777;
+}
+
+/* VALUE */
+.value {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* DIVIDER */
+.divider {
+  width: 60%;
+  height: 1px;
+  background: rgba(201,167,78,0.2);
+  margin: 10px auto;
+}
+
+/* STATUS */
+.status {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #00ff99;
+  font-weight: 600;
+}
+
+/* FOOTER TEXT BELOW CARD */
+.tagline {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #000;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 500px) {
+  .card {
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="header">
+  <div class="logo">COVEA</div>
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</div>
+
+<!-- ================= MAIN ================= -->
+<div class="container">
+
+  <div>
+    <div class="card">
+
+      <div class="company">Covea Wealth Solutions</div>
+
+      <div class="photo"></div>
+
+      <div class="name">SHRUTI</div>
+      <div class="role">SALES ASSOCIATE</div>
+
+      <div class="divider"></div>
+
+      <div class="info-block">
+        <div class="label">Employee ID</div>
+        <div class="value">CWS-26-ADV-002</div>
+
+        <div class="label">Department</div>
+        <div class="value">Sales & Business Development</div>
+
+        <div class="label">Mobile</div>
+        <div class="value">+91 79877 81571</div>
+
+        <div class="label">Email</div>
+        <div class="value">sales@coveawealthsolutions.com</div>
+
+        <div class="label">Joining Date</div>
+        <div class="value">21 April 2026</div>
+      </div>
+
+      <div class="status">✔ Verified Employee</div>
+
+    </div>
+
+    <div class="tagline">Your Trusted Wealth Partner</div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<style>
+.footer {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.footer h3, 
+.footer h4, 
+.footer p, 
+.footer a {
+  color: #fff;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+</style>
+
+<div class="footer">
+
+  <div>
+    <h3>Covea Wealth Solutions Pvt. Ltd.</h3>
+    <p>India</p>
+  </div>
+
+  <div>
+    <h4>Services</h4>
+    <p><a href="investment.html">Investment Planning</a></p>
+    <p><a href="wealth.html">Wealth Management</a></p>
+    <p><a href="risk.html">Risk Advisory</a></p>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>+91 8766289206</p>
+    <p>info@coveawealthsolutions.com</p>
+  </div>
+
+</div>
+
+<div class="footer-bottom">
+  © 2026 Covea Wealth Solutions Pvt. Ltd.
+</div>
+
+</body>
+</html>
